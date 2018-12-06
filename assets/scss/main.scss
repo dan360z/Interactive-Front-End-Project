@@ -1,0 +1,86 @@
+/*font-family: 'Kaushan Script', cursive;
+font-family: 'Open Sans Condensed', sans-serif;*/
+@import "helpers/_variables.scss";
+@import "helpers/_mixins.scss";
+@import "helpers/_helpers.scss";
+
+/*----------------Background and Overlay---------------*/
+
+body {
+    color: $primary-color;
+    font-size: 1.25em;
+    font-family: $secondary-font;
+    background: url(../images/beach.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.over-lay {
+    @extend %overlay;
+}
+
+/*----------------Header---------------*/
+
+.logo {
+    @include border($primary-color);
+    margin: 80px 0px 50px 0px;
+    padding: 5px 15px;
+    display: inline-block;
+    font: {
+        family: $primary-font;
+        size: 45px;
+    }
+}
+
+/*----------------Intoduction Section---------------*/
+
+.intro-wrapper {
+    margin-bottom: 150px;
+    .welcome {
+        font: {
+            family: $primary-font;
+            size: 28px;
+        }
+    }
+    p {
+        margin-bottom: 45px;
+    }
+    .button {
+        @extend %btn;
+        text-decoration: none;
+    }
+}
+
+/*----------------Map---------------*/
+
+#map {
+    @include border($primary-color);
+    height: 85vh;
+}
+
+/*----------------Footer---------------*/
+
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    ul {
+        margin: 0px;
+
+        p {
+            margin: 2px;
+        }
+
+        a {
+            color: $primary-color;
+            &:hover {
+                @extend %mouseOver;
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
+}

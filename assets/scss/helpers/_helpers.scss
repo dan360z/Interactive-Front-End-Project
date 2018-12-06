@@ -1,0 +1,23 @@
+%overlay {
+    background-color: $overlay-opacity;
+}
+
+%btn {
+    @include border($primary-color);
+    padding: 4px 12px;
+    color: $primary-color;
+    font-family: $primary-font;
+    &:hover {
+        @extend %mouseOver;
+    }
+}
+
+%mouseOver {
+    @extend %overlay;
+    @include border($secondary-color);
+    color: $secondary-color;
+    cursor: pointer;
+    -moz-transition: all 0.20s ease-in-out;
+    -webkit-transition: all 0.20s ease-in-out;
+    -o-transition: all 0.20s ease-in-out;
+}

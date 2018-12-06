@@ -1,0 +1,71 @@
+/*font-family: 'Kaushan Script', cursive;
+font-family: 'Open Sans Condensed', sans-serif;*/
+.intro-wrapper .button:hover, .footer ul a:hover, .over-lay {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.intro-wrapper .button {
+  border: 1px solid #fff;
+  padding: 4px 12px;
+  color: #fff;
+  font-family: "Kaushan Script", cursive; }
+
+.intro-wrapper .button:hover, .footer ul a:hover {
+  border: 1px solid #3accd5;
+  color: #3accd5;
+  cursor: pointer;
+  -moz-transition: all 0.20s ease-in-out;
+  -webkit-transition: all 0.20s ease-in-out;
+  -o-transition: all 0.20s ease-in-out; }
+
+/*----------------Background and Overlay---------------*/
+body {
+  color: #fff;
+  font-size: 1.25em;
+  font-family: "Open Sans Condensed", sans-serif;
+  background: url(../images/beach.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+/*----------------Header---------------*/
+.logo {
+  border: 1px solid #fff;
+  margin: 80px 0px 50px 0px;
+  padding: 5px 15px;
+  display: inline-block;
+  font-family: "Kaushan Script", cursive;
+  font-size: 45px; }
+
+/*----------------Intoduction Section---------------*/
+.intro-wrapper {
+  margin-bottom: 150px; }
+  .intro-wrapper .welcome {
+    font-family: "Kaushan Script", cursive;
+    font-size: 28px; }
+  .intro-wrapper p {
+    margin-bottom: 45px; }
+  .intro-wrapper .button {
+    text-decoration: none; }
+
+/*----------------Map---------------*/
+#map {
+  border: 1px solid #fff;
+  height: 85vh; }
+
+/*----------------Footer---------------*/
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0; }
+  .footer ul {
+    margin: 0px; }
+    .footer ul p {
+      margin: 2px; }
+    .footer ul a {
+      color: #fff; }
+      .footer ul a:hover {
+        background-color: transparent;
+        border: none; }
+
+/*# sourceMappingURL=main.css.map */

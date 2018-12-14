@@ -48,6 +48,13 @@ body {
   .intro-wrapper .button {
     text-decoration: none; }
 
+/*--------------Filters--------------*/
+#filters > li {
+  cursor: pointer; }
+
+.selected {
+  color: #3accd5; }
+
 /*----------------Map---------------*/
 #map {
   border: 1px solid #fff;

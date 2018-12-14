@@ -40,22 +40,23 @@
                     provident, perferendis eveniet porro magni.</p>
                 <a class="button" href="#map">Lets go</a>
             </div>
-            <!-------/Welcome paragraph about------->
         </section>
-
+        <!-------Map section------->
         <section>
-
-            <!---------------Map---------------->
             <div class="row">
                 <div class="col-12 text-center">
-
+                    <!---------------Search and filters---------------->
                     <input id="searchPlace" type="text" placeholder="Search">
-
+                    <ul class="list-inline" id="filters">
+                        <li class="list-inline-item" id="bars">Bars</li>
+                        <li class="list-inline-item" id="restaurants">Restaurants</li>
+                    </ul>
+                    <!---------------/Search and filters---------------->
+                    <!---------------Map---------------->
                     <div id="map"></div>
+                    <!--------------/Map---------------->
                 </div>
             </div>
-            <!--------------/Map---------------->
-
             <!--------------Info window---------------->
             <div style="display: none;">
                 <div id="place-details">
@@ -84,6 +85,8 @@
 
     <!------jQuery CDN--------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!------Filters JS Link--------------->
+    <script type="text/javascript" src="assets/js/filters.js"></script>
     <!------Map JS Link--------------->
     <script type="text/javascript" src="assets/js/map.js"></script>
     <!------Google Maps API--------------->

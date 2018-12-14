@@ -3,6 +3,9 @@ var map;
 var service;
 var markers = [];
 var infoWindow;
+//Filter variables----------
+var placeType;
+var icons;
 
 //Initialize Map------------------------------------
 function initMap() {
@@ -31,26 +34,44 @@ function initMap() {
         map.setZoom(14);
     });
 
-    //Nearby establishment search click---------------------------
+    //Nearby establishment search by click---------------------------
     service = new google.maps.places.PlacesService(map);
-
     google.maps.event.addListener(map, 'click', function(event) {
         map.panTo(event.latLng);
         map.setZoom(15);
-        searchBarsandRestaurants();
+        filterResults();//Runs filterResults function------------
     });
 
-    //Info window with place details--------------------------------
+    //Info window with place details------------------------------
     infoWindow = new google.maps.InfoWindow({
         content: document.getElementById('place-details')
     });
 }
 
-//Search bars and restaurants---------------------------------------------------------
-function searchBarsandRestaurants() {
+//Filter results----------------------------------------------
+function filterResults() {
+    if ($('#filters').children().hasClass('selected')) {
+        
+        if($('#bars').hasClass('selected')){
+            placeType = ['bar'];
+            icons = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        }
+        if($('#restaurants').hasClass('selected')){
+            placeType = ['restaurant'];
+            icons = "";
+        }
+        //Runs searchPlaces function------------------------------------------
+        searchPlaces();
+    } else {
+        alert('Please select an estblishment type!');
+    }
+}
+
+//Search places---------------------------------------------------------
+function searchPlaces() {
     var search = {
         bounds: map.getBounds(),
-        types: ['restaurant', 'bar']
+        types: placeType
     };
     service.nearbySearch(search, function(results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -58,7 +79,9 @@ function searchBarsandRestaurants() {
             //Creates markers----------------------------------------------------
             for (var i = 0; i < results.length; i++) {
                 markers[i] = new google.maps.Marker({
-                    position: results[i].geometry.location
+                    position: results[i].geometry.location,
+                    title:'Click Me!',
+                    icon: icons
                     //icons here 
                 });
                 //Show info window when user clicks on a marker----------------------------

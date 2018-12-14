@@ -1,5 +1,6 @@
 /*font-family: 'Kaushan Script', cursive;
 font-family: 'Open Sans Condensed', sans-serif;*/
+
 @import "helpers/_variables.scss";
 @import "helpers/_mixins.scss";
 @import "helpers/_helpers.scss";
@@ -58,6 +59,20 @@ body {
 #map {
     @include border($primary-color);
     height: 85vh;
+}
+
+/*----------------Info Window---------------*/
+
+#place-details {
+    margin-right: 15px;;
+    ul {
+        list-style-type: none;
+        #place-name {
+            font-family: $primary-font;
+            font-size: 18px;
+            color: #000;
+        }
+    }
 }
 
 /*----------------Footer---------------*/

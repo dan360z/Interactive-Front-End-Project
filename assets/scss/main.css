@@ -53,6 +53,16 @@ body {
   border: 1px solid #fff;
   height: 85vh; }
 
+/*----------------Info Window---------------*/
+#place-details {
+  margin-right: 15px; }
+  #place-details ul {
+    list-style-type: none; }
+    #place-details ul #place-name {
+      font-family: "Kaushan Script", cursive;
+      font-size: 18px;
+      color: #000; }
+
 /*----------------Footer---------------*/
 .footer {
   position: relative;

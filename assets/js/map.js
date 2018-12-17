@@ -5,7 +5,7 @@ var markers = [];
 var infoWindow;
 //Filter variables----------
 var placeType;
-var icons;
+
 
 //Initialize Map------------------------------------
 function initMap() {
@@ -39,7 +39,7 @@ function initMap() {
     google.maps.event.addListener(map, 'click', function(event) {
         map.panTo(event.latLng);
         map.setZoom(15);
-        filterResults();//Runs filterResults function------------
+        filterResults(); //Runs filterResults------------
     });
 
     //Info window with place details------------------------------
@@ -51,18 +51,65 @@ function initMap() {
 //Filter results----------------------------------------------
 function filterResults() {
     if ($('#filters').children().hasClass('selected')) {
-        
-        if($('#bars').hasClass('selected')){
+
+        if ($('#accomodation').hasClass('selected')) {
+            placeType = ['lodging'];
+        }
+        else if ($('#atm').hasClass('selected')) {
+            placeType = ['atm'];
+        }
+        else if ($('#supermarket').hasClass('selected')) {
+            placeType = ['supermarket'];
+        }
+        else if ($('#bar').hasClass('selected')) {
             placeType = ['bar'];
-            icons = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
         }
-        if($('#restaurants').hasClass('selected')){
-            placeType = ['restaurant'];
-            icons = "";
+        else if ($('#restaurant').hasClass('selected')) {
+            placeType = ['restaurant']; // ,, 'art_gallery', , , ];
         }
-        //Runs searchPlaces function------------------------------------------
+        else if ($('#night-club').hasClass('selected')) {
+            placeType = ['night_club'];
+        }
+        else if ($('#casino').hasClass('selected')) {
+            placeType = ['casino'];
+        }
+        else if ($('#bowling').hasClass('selected')) {
+            placeType = ['bowling_alley'];
+        }
+        else if ($('#shopping').hasClass('selected')) {
+            placeType = ['shopping_mall'];
+        }
+        else if ($('#park').hasClass('selected')) {
+            placeType = ['park'];
+        }
+        else if ($('#amusement-park').hasClass('selected')) {
+            placeType = ['amusement_park'];
+        }
+        else if ($('#museum').hasClass('selected')) {
+            placeType = ['museum'];
+        }
+        else if ($('#aquarium').hasClass('selected')) {
+            placeType = ['aquarium'];
+        }
+        else if ($('#zoo').hasClass('selected')) {
+            placeType = ['zoo'];
+        }
+        else if ($('#train-station').hasClass('selected')) {
+            placeType = ['train_station']; 
+        }
+        else if ($('#taxi-stand').hasClass('selected')) {
+            placeType = ['taxi_stand']; 
+        }
+        else if ($('#transit-station').hasClass('selected')) {
+            placeType = ['transit_station']; 
+        }
+        else if ($('#subway-station').hasClass('selected')) {
+            placeType = ['subway_station']; 
+        }
+        //Runs searchPlaces------------------------------------------
         searchPlaces();
-    } else {
+    }
+    else {
         alert('Please select an estblishment type!');
     }
 }
@@ -75,14 +122,16 @@ function searchPlaces() {
     };
     service.nearbySearch(search, function(results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
+            /*if (!results[0]) {
+                alert('No results nearby!');
+            }*/
+            //Clear markers---------------------------------------------------
             clearMarkers();
-            //Creates markers----------------------------------------------------
+            //Create markers----------------------------------------------------
             for (var i = 0; i < results.length; i++) {
                 markers[i] = new google.maps.Marker({
                     position: results[i].geometry.location,
-                    title:'Click Me!',
-                    icon: icons
-                    //icons here 
+                    title: 'Information',
                 });
                 //Show info window when user clicks on a marker----------------------------
                 markers[i].placeResult = results[i];

@@ -42,14 +42,18 @@
             </div>
         </section>
         <!-------Map section------->
-        <section>
-            <div class="row">
-                <!--------------Search---------------->
+        
+            <!--------------Search---------------->
+            <section class="row">
                 <div class="col-12 search-wrapper text-center">
-                    <button class="places-btn">Places</button>
+
                     <input class="search" id="searchPlace" type="text" placeholder="Search">
+                    <button class="places-btn">Places</button>
+
                 </div>
-                <!--------------/Search---------------->
+            </section>
+            <!--------------/Search---------------->
+            <section class="row">
                 <div class="col-12 map-wrapper">
                     <!---------------Map---------------->
                     <div id="map"></div>
@@ -82,17 +86,17 @@
                     </div>
                     <!--------------Filter menu---------------->
                 </div>
-            </div>
-            <!--------------Info window---------------->
-            <div style="display: none;">
-                <div id="place-details">
-                    <ul>
-                        <li id="place-name"></li>
-                    </ul>
+
+                <!--------------Info window---------------->
+                <div style="display: none;">
+                    <div id="place-details">
+                        <ul>
+                            <li id="place-name"></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <!--------------/Info window---------------->
-        </section>
+                <!--------------/Info window---------------->
+            </section>
 
     </main>
 

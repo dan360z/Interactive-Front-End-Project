@@ -39,6 +39,7 @@ function initMap() {
     google.maps.event.addListener(map, 'click', function(event) {
         map.panTo(event.latLng);
         map.setZoom(15);
+        clearMarkers();  //Clears markers when the user clicks
         filterResults(); //Runs filterResults------------
     });
 
@@ -50,7 +51,7 @@ function initMap() {
 
 //Filter results----------------------------------------------
 function filterResults() {
-    if ($('#filters').children().hasClass('selected')) {
+    if ($('button').hasClass('selected')) {
 
         if ($('#accomodation').hasClass('selected')) {
             placeType = ['lodging'];
@@ -58,14 +59,14 @@ function filterResults() {
         else if ($('#atm').hasClass('selected')) {
             placeType = ['atm'];
         }
-        else if ($('#supermarket').hasClass('selected')) {
-            placeType = ['supermarket'];
+        else if ($('#store').hasClass('selected')) {
+            placeType = ['store'];
         }
         else if ($('#bar').hasClass('selected')) {
             placeType = ['bar'];
         }
         else if ($('#restaurant').hasClass('selected')) {
-            placeType = ['restaurant']; // ,, 'art_gallery', , , ];
+            placeType = ['restaurant'];
         }
         else if ($('#night-club').hasClass('selected')) {
             placeType = ['night_club'];
@@ -95,16 +96,16 @@ function filterResults() {
             placeType = ['zoo'];
         }
         else if ($('#train-station').hasClass('selected')) {
-            placeType = ['train_station']; 
+            placeType = ['train_station'];
         }
         else if ($('#taxi-stand').hasClass('selected')) {
-            placeType = ['taxi_stand']; 
+            placeType = ['taxi_stand'];
         }
         else if ($('#transit-station').hasClass('selected')) {
-            placeType = ['transit_station']; 
+            placeType = ['transit_station'];
         }
         else if ($('#subway-station').hasClass('selected')) {
-            placeType = ['subway_station']; 
+            placeType = ['subway_station'];
         }
         //Runs searchPlaces------------------------------------------
         searchPlaces();
@@ -122,9 +123,6 @@ function searchPlaces() {
     };
     service.nearbySearch(search, function(results, status) {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
-            /*if (!results[0]) {
-                alert('No results nearby!');
-            }*/
             //Clear markers---------------------------------------------------
             clearMarkers();
             //Create markers----------------------------------------------------
@@ -138,6 +136,9 @@ function searchPlaces() {
                 google.maps.event.addListener(markers[i], 'click', showInfoWindow);
                 setTimeout(placeMarkers(i), i * 60);
             }
+        }
+        if (!results[0]) {
+            alert('No results nearby!');
         }
     });
 }

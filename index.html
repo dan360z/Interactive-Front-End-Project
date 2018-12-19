@@ -44,21 +44,43 @@
         <!-------Map section------->
         <section>
             <div class="row">
-                <div class="col-12 text-center">
-                    <!---------------Search and filters---------------->
-                    <input id="searchPlace" type="text" placeholder="Search">
-                    <!--<ul class="list-inline" id="filters">
-                        <li class="list-inline-item" id="bars">Bars</li>
-                        <li class="list-inline-item" id="restaurants">Restaurants</li>
-                        <li class="list-inline-item" id="accomodation">Accomodation</li>
-                        <li class="list-inline-item" id="atm">Atms</li>
-                        <li class="list-inline-item" id="attractions">Attractions</li>
-                        <li class="list-inline-item" id="transport">Transport</li>
-                    </ul>--------------->
-                    <!---------------/Search and filters---------------->
+                <!--------------Search---------------->
+                <div class="col-12 search-wrapper text-center">
+                    <button class="places-btn">Places</button>
+                    <input class="search" id="searchPlace" type="text" placeholder="Search">
+                </div>
+                <!--------------/Search---------------->
+                <div class="col-12 map-wrapper">
                     <!---------------Map---------------->
                     <div id="map"></div>
                     <!--------------/Map---------------->
+                    <!--------------Filter menu---------------->
+                    <div class="menu container-fluid text-center">
+                        <div class="row">
+                            <div class="col-12">Select An Establishment</div>
+                        </div>
+                        <div class="row" id="filters">
+                            <div class="col-6 col-lg-2 place-type"><button id="accomodation">Accomodation</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="atm">Atms</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="store">Stores</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="bar">Bars</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="restaurant">Restaurants</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="night-club">Nightclubs</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="casino">Casinos</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="bowling">Bowling</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="shopping">Shopping Malls</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="park">Parks</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="amusement-park">Amusement Parks</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="museum">Museums</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="aquarium">Aquariums</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="zoo">Zoos</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="train-station">Train Stations</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="taxi-stand">Taxi Stands</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="transit-station">Transit Stations</button></div>
+                            <div class="col-6 col-lg-2 place-type"><button id="subway-station">Subway Stations</button></div>
+                        </div>
+                    </div>
+                    <!--------------Filter menu---------------->
                 </div>
             </div>
             <!--------------Info window---------------->

@@ -1,76 +1,136 @@
 $(document).ready(function() {
 
+   $('.menu').hide();
+
+   $('.places-btn').click(function() {
+      $('.menu').slideToggle()
+   });
+
    $('#accomodation').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#atm').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
-   $('#super-market').click(function() {
-      $('#filters').children().removeClass('selected');
+   $('#store').click(function() {
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#bar').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#restaurant').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#night-club').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#casino').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#bowling').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#shopping').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#park').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#amusement-park').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#museum').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#aquarium').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#zoo').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#train-station').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#taxi-stand').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#transit-station').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
    $('#subway-station').click(function() {
-      $('#filters').children().removeClass('selected');
+      $('button').removeClass('selected');
       $(this).addClass('selected');
+      setTimeout(function() {
+         $('.menu').slideToggle()
+      }, 200);
    });
 
 });

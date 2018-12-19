@@ -1,15 +1,16 @@
 /*font-family: 'Kaushan Script', cursive;
 font-family: 'Open Sans Condensed', sans-serif;*/
-.intro-wrapper .button:hover, .footer ul a:hover, .over-lay {
+.intro-wrapper .button:hover, .search-wrapper .places-btn:hover, .map-wrapper .menu .place-type button:hover, .footer ul a:hover, .over-lay, .search-wrapper .search {
   background-color: rgba(0, 0, 0, 0.3); }
 
-.intro-wrapper .button {
+.intro-wrapper .button, .search-wrapper .places-btn, .map-wrapper .menu .place-type button {
   border: 1px solid #fff;
   padding: 4px 12px;
   color: #fff;
+  background-color: transparent;
   font-family: "Kaushan Script", cursive; }
 
-.intro-wrapper .button:hover, .footer ul a:hover {
+.intro-wrapper .button:hover, .search-wrapper .places-btn:hover, .map-wrapper .menu .place-type button:hover, .footer ul a:hover {
   border: 1px solid #3accd5;
   color: #3accd5;
   cursor: pointer;
@@ -48,17 +49,41 @@ body {
   .intro-wrapper .button {
     text-decoration: none; }
 
-/*--------------Filters--------------*/
-#filters > li {
-  cursor: pointer; }
+/*--------------Search and filters---------------*/
+.search-wrapper {
+  margin-bottom: 4px; }
+  .search-wrapper .places-btn {
+    margin: 0 10px;
+    background-color: rgba(0, 0, 0, 0.3); }
+  .search-wrapper .search {
+    color: #fff;
+    width: 170px;
+    height: 35px;
+    border: 1px solid #fff; }
 
-.selected {
-  color: #3accd5; }
-
-/*----------------Map---------------*/
-#map {
-  border: 1px solid #fff;
-  height: 85vh; }
+/*----------------Map and components---------------*/
+.map-wrapper {
+  padding: 0; }
+  .map-wrapper #map {
+    height: 85vh; }
+  .map-wrapper .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); }
+    .map-wrapper .menu .place-type {
+      height: 49px;
+      padding: 0;
+      border: 1px solid #000; }
+      .map-wrapper .menu .place-type button {
+        width: 90%;
+        margin-top: 10px;
+        font-size: 70%; }
+      .map-wrapper .menu .place-type .selected {
+        color: #3accd5;
+        border-color: #3accd5; }
 
 /*----------------Info Window---------------*/
 #place-details {

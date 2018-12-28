@@ -41,7 +41,7 @@ header {
 /*----------------Intoduction Section---------------*/
 
 .intro-wrapper {
-    margin-bottom: 200px;
+    margin-bottom: 80px;
     .welcome {
         font: {
             family: $primary-font;
@@ -81,6 +81,8 @@ header {
     }
 }
 
+/*----------------Map and components---------------*/
+
 .search-container {
     position: absolute;
     z-index: 1;
@@ -91,12 +93,16 @@ header {
         padding-left: 5px;
         margin: 15px 0px;
         color: #fff;
+        font-weight: 300;
         background-color: transparent;
         @include border($primary-color);
     }
 }
 
-/*----------------Map and components---------------*/
+.menu-heading {
+    margin-top: 10px;
+    font-weight: 300;
+}
 
 .map-wrapper {
     padding: 0;

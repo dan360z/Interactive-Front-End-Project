@@ -22,7 +22,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 body {
   color: #fff;
   font-size: 1.25em;
-  font-family: "Open Sans Condensed", sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
 /*----------------Header---------------*/
 header {
@@ -42,7 +42,7 @@ header {
 
 /*----------------Intoduction Section---------------*/
 .intro-wrapper {
-  margin-bottom: 200px; }
+  margin-bottom: 80px; }
   .intro-wrapper .welcome {
     font-family: "Kaushan Script", cursive;
     font-size: 28px; }
@@ -70,6 +70,7 @@ header {
     border: 1px solid #0ED2F7;
     background-image: linear-gradient(to right, #00c6ff, #0072ff); }
 
+/*----------------Map and components---------------*/
 .search-container {
   position: absolute;
   z-index: 1;
@@ -80,10 +81,14 @@ header {
     padding-left: 5px;
     margin: 15px 0px;
     color: #fff;
+    font-weight: 300;
     background-color: transparent;
     border: 1px solid #fff; }
 
-/*----------------Map and components---------------*/
+.menu-heading {
+  margin-top: 10px;
+  font-weight: 300; }
+
 .map-wrapper {
   padding: 0; }
   .map-wrapper #map {

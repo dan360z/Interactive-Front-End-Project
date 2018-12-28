@@ -3,12 +3,14 @@ $(document).ready(function() {
    $('.search-container').hide();
 
    $('#search-btn').click(function() {
+      $('.menu').slideUp();
       $('.search-container').slideToggle();
    });
 
    $('.menu').hide();
 
    $('#places-btn').click(function() {
+      $('.search-container').slideUp();
       $('.menu').slideToggle();
    });
 

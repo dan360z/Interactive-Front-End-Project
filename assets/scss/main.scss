@@ -61,15 +61,13 @@ header {
 /*--------------Search and filters---------------*/
 
 .map-heading {
-    //height: 14vh;
     background-color: #eef2f3;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     .logo2 {
         font-family: $primary-font;
         @include border(#000);
-        margin-top: 10px;
-        margin-left: 4px;
+        margin: 10px 0px;
         padding: 2px;
         width: 150px;
         color: #000;
@@ -79,14 +77,14 @@ header {
         font-size: 16px;
         @extend %btn;
         @include border(#0ED2F7);
-        background-image: linear-gradient(to right, #00c6ff, #0072ff);
+        @include gradient;
     }
 }
 
 .search-container {
-    background-image: linear-gradient(to right, #00c6ff, #0072ff);
     position: absolute;
     z-index: 1;
+    @include gradient;
     .search {
         width: 85%;
         height: 28px;
@@ -112,6 +110,7 @@ header {
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.8);
+        overflow: auto;
         .place-type {
             height: 49px;
             padding: 0;
@@ -151,7 +150,6 @@ footer {
     position: relative;
     bottom: 0;
     left: 0;
-    height: 5vh;
     font-size: 17px;
 
     ul {

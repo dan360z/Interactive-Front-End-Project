@@ -1,3 +1,7 @@
 @mixin border($color) {
     border: 1px solid $color;
 }
+
+@mixin gradient{
+    background-image: linear-gradient(to right, #00c6ff, #0072ff);
+}

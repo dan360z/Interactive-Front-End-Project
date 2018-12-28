@@ -1,18 +1,18 @@
 /*font-family: 'Kaushan Script', cursive;
 font-family: 'Open Sans Condensed', sans-serif;*/
-.intro-wrapper .button:hover, .search-wrapper .places-btn:hover, .map-wrapper .menu .place-type button:hover, .footer ul a:hover, .over-lay, .search-wrapper .search {
+.intro-wrapper .button:hover, .map-heading .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover, .over-lay {
   background-color: rgba(0, 0, 0, 0.3); }
 
-.intro-wrapper .button, .search-wrapper .places-btn, .map-wrapper .menu .place-type button {
+.intro-wrapper .button, .map-heading .map-btns, .map-wrapper .menu .place-type button {
   border: 1px solid #fff;
   padding: 4px 12px;
   color: #fff;
   background-color: transparent;
   font-family: "Kaushan Script", cursive; }
 
-.intro-wrapper .button:hover, .search-wrapper .places-btn:hover, .map-wrapper .menu .place-type button:hover, .footer ul a:hover {
-  border: 1px solid #3accd5;
-  color: #3accd5;
+.intro-wrapper .button:hover, .map-heading .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover {
+  border: 1px solid #0072ff;
+  color: #0072ff;
   cursor: pointer;
   -moz-transition: all 0.20s ease-in-out;
   -webkit-transition: all 0.20s ease-in-out;
@@ -22,14 +22,16 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 body {
   color: #fff;
   font-size: 1.25em;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif; }
+
+/*----------------Header---------------*/
+header {
   background: url(../images/beach.jpg) no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
-/*----------------Header---------------*/
 .logo {
   border: 1px solid #fff;
   margin: 80px 0px 50px 0px;
@@ -40,32 +42,53 @@ body {
 
 /*----------------Intoduction Section---------------*/
 .intro-wrapper {
-  margin-bottom: 150px; }
+  margin-bottom: 200px; }
   .intro-wrapper .welcome {
     font-family: "Kaushan Script", cursive;
     font-size: 28px; }
   .intro-wrapper p {
     margin-bottom: 45px; }
   .intro-wrapper .button {
+    border: 1px solid #fff;
     text-decoration: none; }
 
 /*--------------Search and filters---------------*/
-.search-wrapper {
-  margin-bottom: 4px; }
-  .search-wrapper .places-btn {
-    margin: 0 10px;
-    background-color: rgba(0, 0, 0, 0.3); }
-  .search-wrapper .search {
+.map-heading {
+  background-color: #eef2f3;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000; }
+  .map-heading .logo2 {
+    font-family: "Kaushan Script", cursive;
+    border: 1px solid #000;
+    margin-top: 10px;
+    margin-left: 4px;
+    padding: 2px;
+    width: 150px;
+    color: #000; }
+  .map-heading .map-btns {
+    margin: 10px 10px;
+    font-size: 16px;
+    border: 1px solid #0ED2F7;
+    background-image: linear-gradient(to right, #00c6ff, #0072ff); }
+
+.search-container {
+  background-image: linear-gradient(to right, #00c6ff, #0072ff);
+  position: absolute;
+  z-index: 1; }
+  .search-container .search {
+    width: 85%;
+    height: 28px;
+    padding-left: 5px;
+    margin: 15px 0px;
     color: #fff;
-    width: 170px;
-    height: 35px;
+    background-color: transparent;
     border: 1px solid #fff; }
 
 /*----------------Map and components---------------*/
 .map-wrapper {
   padding: 0; }
   .map-wrapper #map {
-    height: 85vh; }
+    height: 80vh; }
   .map-wrapper .menu {
     position: absolute;
     top: 0;
@@ -75,15 +98,14 @@ body {
     background-color: rgba(0, 0, 0, 0.8); }
     .map-wrapper .menu .place-type {
       height: 49px;
-      padding: 0;
-      border: 1px solid #000; }
+      padding: 0; }
       .map-wrapper .menu .place-type button {
         width: 90%;
         margin-top: 10px;
-        font-size: 70%; }
+        font-size: 75%; }
       .map-wrapper .menu .place-type .selected {
-        color: #3accd5;
-        border-color: #3accd5; }
+        color: #0072ff;
+        border-color: #0072ff; }
 
 /*----------------Info Window---------------*/
 #place-details {
@@ -96,17 +118,19 @@ body {
       color: #000; }
 
 /*----------------Footer---------------*/
-.footer {
+footer {
   position: relative;
   bottom: 0;
-  left: 0; }
-  .footer ul {
+  left: 0;
+  height: 5vh;
+  font-size: 17px; }
+  footer ul {
     margin: 0px; }
-    .footer ul p {
-      margin: 4px; }
-    .footer ul a {
+    footer ul p {
+      margin: 0px; }
+    footer ul a {
       color: #fff; }
-      .footer ul a:hover {
+      footer ul a:hover {
         background-color: transparent;
         border: none; }
 

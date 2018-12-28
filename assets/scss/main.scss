@@ -11,11 +11,6 @@ body {
     color: $primary-color;
     font-size: 1.25em;
     font-family: $secondary-font;
-    background: url(../images/beach.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 .over-lay {
@@ -23,6 +18,14 @@ body {
 }
 
 /*----------------Header---------------*/
+
+header {
+    background: url(../images/beach.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 .logo {
     @include border($primary-color);
@@ -38,7 +41,7 @@ body {
 /*----------------Intoduction Section---------------*/
 
 .intro-wrapper {
-    margin-bottom: 150px;
+    margin-bottom: 200px;
     .welcome {
         font: {
             family: $primary-font;
@@ -50,25 +53,48 @@ body {
     }
     .button {
         @extend %btn;
+        @include border($primary-color);
         text-decoration: none;
     }
 }
 
 /*--------------Search and filters---------------*/
 
-.search-wrapper {
-    margin-bottom: 4px;
-    .places-btn {
-        margin: 0 10px;
-        @extend %btn;
-        background-color: $overlay-opacity;
+.map-heading {
+    //height: 14vh;
+    background-color: #eef2f3;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    .logo2 {
+        font-family: $primary-font;
+        @include border(#000);
+        margin-top: 10px;
+        margin-left: 4px;
+        padding: 2px;
+        width: 150px;
+        color: #000;
     }
+    .map-btns {
+        margin: 10px 10px;
+        font-size: 16px;
+        @extend %btn;
+        @include border(#0ED2F7);
+        background-image: linear-gradient(to right, #00c6ff, #0072ff);
+    }
+}
+
+.search-container {
+    background-image: linear-gradient(to right, #00c6ff, #0072ff);
+    position: absolute;
+    z-index: 1;
     .search {
+        width: 85%;
+        height: 28px;
+        padding-left: 5px;
+        margin: 15px 0px;
         color: #fff;
-        width: 170px;
-        height: 35px;
+        background-color: transparent;
         @include border($primary-color);
-        @extend %overlay;
     }
 }
 
@@ -77,7 +103,7 @@ body {
 .map-wrapper {
     padding: 0;
     #map {
-        height: 85vh;
+        height: 80vh;
     }
     .menu {
         position: absolute;
@@ -89,11 +115,10 @@ body {
         .place-type {
             height: 49px;
             padding: 0;
-            border: 1px solid #000;
             button {
                 width: 90%;
                 margin-top: 10px;
-                font-size: 70%;
+                font-size: 75%;
                 @extend %btn;
             }
             .selected {
@@ -122,16 +147,18 @@ body {
 
 /*----------------Footer---------------*/
 
-.footer {
+footer {
     position: relative;
     bottom: 0;
     left: 0;
+    height: 5vh;
+    font-size: 17px;
 
     ul {
         margin: 0px;
 
         p {
-            margin: 4px;
+            margin: 0px;
         }
 
         a {

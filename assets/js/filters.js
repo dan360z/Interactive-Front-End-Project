@@ -1,9 +1,15 @@
 $(document).ready(function() {
 
+   $('.search-container').hide();
+
+   $('#search-btn').click(function() {
+      $('.search-container').slideToggle();
+   });
+
    $('.menu').hide();
 
-   $('.places-btn').click(function() {
-      $('.menu').slideToggle()
+   $('#places-btn').click(function() {
+      $('.menu').slideToggle();
    });
 
    $('#accomodation').click(function() {

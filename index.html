@@ -21,19 +21,16 @@
 
 <body>
 
-    <header class="container-fluid over-lay">
+    <header class="container-fluid">
         <!-----Main logo---->
-        <div class="row">
+        <section class="row over-lay">
             <div class="col-12 text-center">
                 <h1 class="logo">Let's Explore</h1>
             </div>
-        </div>
+        </section>
         <!----/Main logo---->
-    </header>
-
-    <main class="container-fluid over-lay">
         <!-------Welcome paragraph about------->
-        <section class="row">
+        <section class="row over-lay">
             <div class="col-10 offset-1 col-lg-6 offset-lg-3 intro-wrapper text-center">
                 <h3 class="welcome">Welcome!</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos accusantium eum, sequi expedita, veniam error cum aliquid iure quis odit eaque id eveniet sed ullam obcaecati. Esse expedita modi optio ducimus, ab sapiente consequuntur voluptatum
@@ -41,66 +38,79 @@
                 <a class="button" href="#map">Lets go</a>
             </div>
         </section>
+        <!-------/Welcome paragraph about------->
+    </header>
+
+    <main class="container-fluid">
+
         <!-------Map section------->
-        
-            <!--------------Search---------------->
-            <section class="row">
-                <div class="col-12 search-wrapper text-center">
 
-                    <input class="search" id="searchPlace" type="text" placeholder="Search">
-                    <button class="places-btn">Places</button>
+        <!--------------Search and Places Button---------------->
+        <section class="row map-heading">
+            <div class="col-12 col-sm-6">
+                <h4 class="logo2">Lets's Explore</h4>
+            </div>
+            <div class="col-12 col-sm-6 text-right">
+                <button class="map-btns" id="search-btn">Search</button>
+                <button class="map-btns" id="places-btn">Places</button>
+            </div>
+        </section>
 
-                </div>
-            </section>
-            <!--------------/Search---------------->
-            <section class="row">
-                <div class="col-12 map-wrapper">
-                    <!---------------Map---------------->
-                    <div id="map"></div>
-                    <!--------------/Map---------------->
-                    <!--------------Filter menu---------------->
-                    <div class="menu container-fluid text-center">
-                        <div class="row">
-                            <div class="col-12">Select An Establishment</div>
-                        </div>
-                        <div class="row" id="filters">
-                            <div class="col-6 col-lg-2 place-type"><button id="accomodation">Accomodation</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="atm">Atms</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="store">Stores</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="bar">Bars</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="restaurant">Restaurants</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="night-club">Nightclubs</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="casino">Casinos</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="bowling">Bowling</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="shopping">Shopping Malls</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="park">Parks</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="amusement-park">Amusement Parks</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="museum">Museums</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="aquarium">Aquariums</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="zoo">Zoos</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="train-station">Train Stations</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="taxi-stand">Taxi Stands</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="transit-station">Transit Stations</button></div>
-                            <div class="col-6 col-lg-2 place-type"><button id="subway-station">Subway Stations</button></div>
-                        </div>
+        <section class="row text-center">
+            <div class="col-12 search-container">
+                <h4>Search Your Destination</h4>
+                <input class="search" id="searchPlace" type="text" placeholder="Search">
+            </div>
+        </section>
+        <!--------------/Search---------------->
+        <section class="row">
+            <div class="col-12 map-wrapper">
+                <!---------------Map---------------->
+                <div id="map"></div>
+                <!--------------/Map---------------->
+                <!--------------Places menu---------------->
+                <div class="menu container-fluid text-center">
+                    <div class="row">
+                        <div class="col-12">Select An Establishment</div>
                     </div>
-                    <!--------------Filter menu---------------->
-                </div>
-
-                <!--------------Info window---------------->
-                <div style="display: none;">
-                    <div id="place-details">
-                        <ul>
-                            <li id="place-name"></li>
-                        </ul>
+                    <div class="row" id="filters">
+                        <div class="col-6 col-lg-2 place-type"><button id="accomodation">Accomodation</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="atm">Atms</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="store">Stores</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="bar">Bars</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="restaurant">Restaurants</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="night-club">Nightclubs</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="casino">Casinos</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="bowling">Bowling</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="shopping">Shopping Malls</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="park">Parks</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="amusement-park">Amusement Parks</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="museum">Museums</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="aquarium">Aquariums</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="zoo">Zoos</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="train-station">Train Stations</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="taxi-stand">Taxi Stands</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="transit-station">Transit Stations</button></div>
+                        <div class="col-6 col-lg-2 place-type"><button id="subway-station">Subway Stations</button></div>
                     </div>
                 </div>
-                <!--------------/Info window---------------->
-            </section>
+                <!--------------Places menu---------------->
+            </div>
+
+            <!--------------Info window---------------->
+            <div style="display: none;">
+                <div id="place-details">
+                    <ul>
+                        <li id="place-name"></li>
+                    </ul>
+                </div>
+            </div>
+            <!--------------/Info window---------------->
+        </section>
 
     </main>
 
-    <footer class="container-fluid footer over-lay text-center">
+    <footer class="container-fluid over-lay text-center">
         <!---------------Footer Credits & Github Link---------------->
         <ul class="list-inline">
             <li class="list-inline-item">

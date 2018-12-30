@@ -42,7 +42,7 @@ header {
 
 .intro-wrapper {
     margin-bottom: 80px;
-    .welcome {
+    h3 {
         font: {
             family: $primary-font;
             size: 28px;
@@ -51,7 +51,7 @@ header {
     p {
         margin-bottom: 45px;
     }
-    .button {
+    a {
         @extend %btn;
         @include border($primary-color);
         text-decoration: none;
@@ -60,14 +60,15 @@ header {
 
 /*--------------Search and filters---------------*/
 
-.map-heading {
+.map-header {
+    height: 20vh;
     background-color: #eef2f3;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     .logo2 {
         font-family: $primary-font;
         @include border(#000);
-        margin: 10px 0px;
+        margin: 7px 0px;
         padding: 2px;
         width: 150px;
         color: #000;
@@ -92,6 +93,7 @@ header {
         height: 28px;
         padding-left: 5px;
         margin: 15px 0px;
+        font-size: 16px;
         color: #fff;
         font-weight: 300;
         background-color: transparent;
@@ -107,7 +109,7 @@ header {
 .map-wrapper {
     padding: 0;
     #map {
-        height: 80vh;
+        height: 75vh;
     }
     .menu {
         position: absolute;
@@ -115,7 +117,7 @@ header {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
+        @include gradient;
         overflow: auto;
         .place-type {
             height: 49px;
@@ -127,8 +129,8 @@ header {
                 @extend %btn;
             }
             .selected {
-                color: $secondary-color;
                 border-color: $secondary-color;
+                @extend %overlay;
             }
         }
     }
@@ -139,7 +141,6 @@ header {
 
 #place-details {
     margin-right: 15px;
-    ;
     ul {
         list-style-type: none;
         #place-name {
@@ -153,18 +154,21 @@ header {
 /*----------------Footer---------------*/
 
 footer {
+    height: 5vh;
     position: relative;
     bottom: 0;
     left: 0;
     font-size: 17px;
-
+    font-family: $primary-font;
     ul {
         margin: 0px;
-
         p {
             margin: 0px;
+            font-weight: 300;
+            span {
+                font-family: $secondary-font;
+            }
         }
-
         a {
             color: $primary-color;
             &:hover {

@@ -1,18 +1,17 @@
 /*font-family: 'Kaushan Script', cursive;
 font-family: 'Open Sans Condensed', sans-serif;*/
-.intro-wrapper .button:hover, .map-heading .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover, .over-lay {
+.intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
   background-color: rgba(0, 0, 0, 0.3); }
 
-.intro-wrapper .button, .map-heading .map-btns, .map-wrapper .menu .place-type button {
+.intro-wrapper a, .map-header .map-btns, .map-wrapper .menu .place-type button {
   border: 1px solid #fff;
   padding: 4px 12px;
   color: #fff;
   background-color: transparent;
   font-family: "Kaushan Script", cursive; }
 
-.intro-wrapper .button:hover, .map-heading .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover {
+.intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover {
   border: 1px solid #002bff;
-  color: #002bff;
   cursor: pointer;
   -moz-transition: all 0.20s ease-in-out;
   -webkit-transition: all 0.20s ease-in-out;
@@ -43,28 +42,29 @@ header {
 /*----------------Intoduction Section---------------*/
 .intro-wrapper {
   margin-bottom: 80px; }
-  .intro-wrapper .welcome {
+  .intro-wrapper h3 {
     font-family: "Kaushan Script", cursive;
     font-size: 28px; }
   .intro-wrapper p {
     margin-bottom: 45px; }
-  .intro-wrapper .button {
+  .intro-wrapper a {
     border: 1px solid #fff;
     text-decoration: none; }
 
 /*--------------Search and filters---------------*/
-.map-heading {
+.map-header {
+  height: 20vh;
   background-color: #eef2f3;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000; }
-  .map-heading .logo2 {
+  .map-header .logo2 {
     font-family: "Kaushan Script", cursive;
     border: 1px solid #000;
-    margin: 10px 0px;
+    margin: 7px 0px;
     padding: 2px;
     width: 150px;
     color: #000; }
-  .map-heading .map-btns {
+  .map-header .map-btns {
     margin: 10px 10px;
     font-size: 16px;
     border: 1px solid #0ED2F7;
@@ -80,6 +80,7 @@ header {
     height: 28px;
     padding-left: 5px;
     margin: 15px 0px;
+    font-size: 16px;
     color: #fff;
     font-weight: 300;
     background-color: transparent;
@@ -92,14 +93,14 @@ header {
 .map-wrapper {
   padding: 0; }
   .map-wrapper #map {
-    height: 80vh; }
+    height: 75vh; }
   .map-wrapper .menu {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-image: linear-gradient(to right, #00c6ff, #0072ff);
     overflow: auto; }
     .map-wrapper .menu .place-type {
       height: 49px;
@@ -109,7 +110,6 @@ header {
         margin-top: 10px;
         font-size: 75%; }
       .map-wrapper .menu .place-type .selected {
-        color: #002bff;
         border-color: #002bff; }
 
 /*----------------Info Window---------------*/
@@ -124,14 +124,19 @@ header {
 
 /*----------------Footer---------------*/
 footer {
+  height: 5vh;
   position: relative;
   bottom: 0;
   left: 0;
-  font-size: 17px; }
+  font-size: 17px;
+  font-family: "Kaushan Script", cursive; }
   footer ul {
     margin: 0px; }
     footer ul p {
-      margin: 0px; }
+      margin: 0px;
+      font-weight: 300; }
+      footer ul p span {
+        font-family: "Roboto", sans-serif; }
     footer ul a {
       color: #fff; }
       footer ul a:hover {

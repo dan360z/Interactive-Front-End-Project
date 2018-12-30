@@ -16,7 +16,6 @@
 %mouseOver {
     @extend %overlay;
     @include border($secondary-color);
-    color: $secondary-color;
     cursor: pointer;
     -moz-transition: all 0.20s ease-in-out;
     -webkit-transition: all 0.20s ease-in-out;

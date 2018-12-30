@@ -53,7 +53,7 @@ header {
 
 /*--------------Search and filters---------------*/
 .map-header {
-  height: 20vh;
+  height: 19vh;
   background-color: #eef2f3;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000; }
@@ -79,7 +79,7 @@ header {
     width: 85%;
     height: 28px;
     padding-left: 5px;
-    margin: 15px 0px;
+    margin: 15px 0px 25px 0px;
     font-size: 16px;
     color: #fff;
     font-weight: 300;
@@ -93,7 +93,7 @@ header {
 .map-wrapper {
   padding: 0; }
   .map-wrapper #map {
-    height: 75vh; }
+    height: 76vh; }
   .map-wrapper .menu {
     position: absolute;
     top: 0;
@@ -129,7 +129,8 @@ footer {
   bottom: 0;
   left: 0;
   font-size: 17px;
-  font-family: "Kaushan Script", cursive; }
+  font-family: "Kaushan Script", cursive;
+  overflow: auto; }
   footer ul {
     margin: 0px; }
     footer ul p {
@@ -142,5 +143,16 @@ footer {
       footer ul a:hover {
         background-color: transparent;
         border: none; }
+
+/*----------------Media Queries---------------*/
+@media (min-width: 576px) {
+  .map-header {
+    height: 7vh; }
+
+  .map-wrapper #map {
+    height: 89vh; }
+
+  footer {
+    height: 4vh; } }
 
 /*# sourceMappingURL=main.css.map */

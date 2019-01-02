@@ -1,9 +1,12 @@
-%overlay {
-    background-color: $overlay-opacity;
+
+//-----Background image, selected buttons and buttons hover overlay
+%overlay {                        
+    background-color: $overlay-opacity;  
 }
 
-%btn {
-    @include border($primary-color);
+//-----Base styles for the buttons
+%btn {   
+    @include border($primary-color);  
     padding: 4px 12px;
     color: $primary-color;
     background-color: transparent;
@@ -13,6 +16,7 @@
     }
 }
 
+//-----Styles for the buttons and hover states
 %mouseOver {
     @extend %overlay;
     @include border($secondary-color);

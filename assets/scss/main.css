@@ -11,7 +11,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
   font-family: "Kaushan Script", cursive; }
 
 .intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover {
-  border: 1px solid #002bff;
+  border: 1px solid #000;
   cursor: pointer;
   -moz-transition: all 0.20s ease-in-out;
   -webkit-transition: all 0.20s ease-in-out;
@@ -22,6 +22,8 @@ body {
   color: #fff;
   font-size: 1.25em;
   font-family: "Roboto", sans-serif; }
+  body button:focus {
+    outline: none; }
 
 /*----------------Header---------------*/
 header {
@@ -53,7 +55,7 @@ header {
 
 /*--------------Search and filters---------------*/
 .map-header {
-  height: 19vh;
+  min-height: 19vh;
   background-color: #eef2f3;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000; }
@@ -69,6 +71,11 @@ header {
     font-size: 16px;
     border: 1px solid #0ED2F7;
     background-image: linear-gradient(to right, #00c6ff, #0072ff); }
+  .map-header #places-btn {
+    border: 1px solid #fb6000;
+    background-image: linear-gradient(to right, #fe8c00, #f83600); }
+    .map-header #places-btn:hover {
+      border: 1px solid #000; }
 
 /*----------------Map and components---------------*/
 .search-container {
@@ -85,6 +92,8 @@ header {
     font-weight: 300;
     background-color: transparent;
     border: 1px solid #fff; }
+    .search-container .search:focus {
+      outline: none; }
 
 .menu-heading {
   margin-top: 10px;
@@ -100,7 +109,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right, #00c6ff, #0072ff);
+    background-image: linear-gradient(to right, #fe8c00, #f83600);
     overflow: auto; }
     .map-wrapper .menu .place-type {
       height: 49px;
@@ -111,7 +120,7 @@ header {
         font-family: "Roboto", sans-serif;
         font-size: 75%; }
       .map-wrapper .menu .place-type .selected {
-        border-color: #002bff; }
+        border-color: #000; }
 
 /*----------------Info Window---------------*/
 #place-details {
@@ -129,8 +138,8 @@ footer {
   position: relative;
   bottom: 0;
   left: 0;
-  font-size: 17px;
   font-family: "Kaushan Script", cursive;
+  font-size: 17px;
   overflow: auto; }
   footer ul {
     margin: 0px; }

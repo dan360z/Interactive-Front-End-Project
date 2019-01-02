@@ -11,6 +11,9 @@ body {
     color: $primary-color;
     font-size: 1.25em;
     font-family: $secondary-font;
+    button:focus {
+        outline: none;
+    }
 }
 
 .over-lay {
@@ -61,7 +64,7 @@ header {
 /*--------------Search and filters---------------*/
 
 .map-header {
-    height: 19vh;
+    min-height: 19vh;
     background-color: #eef2f3;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
@@ -78,7 +81,14 @@ header {
         font-size: 16px;
         @extend %btn;
         @include border(#0ED2F7);
-        @include gradient;
+        @include gradient($lightBlueDarkBlue);
+    }
+    #places-btn {
+        @include border(#fb6000);
+        @include gradient($lightOragneDarkOrange);
+        &:hover {
+            @include border($secondary-color);
+        }
     }
 }
 
@@ -87,7 +97,7 @@ header {
 .search-container {
     position: absolute;
     z-index: 1;
-    @include gradient;
+    @include gradient($lightBlueDarkBlue);
     .search {
         width: 85%;
         height: 28px;
@@ -98,6 +108,9 @@ header {
         font-weight: 300;
         background-color: transparent;
         @include border($primary-color);
+        &:focus {
+            outline: none;
+        }
     }
 }
 
@@ -117,7 +130,7 @@ header {
         left: 0;
         width: 100%;
         height: 100%;
-        @include gradient;
+        @include gradient($lightOragneDarkOrange);
         overflow: auto;
         .place-type {
             height: 49px;
@@ -129,7 +142,7 @@ header {
                 font: {
                     family: $secondary-font;
                     size: 75%;
-                };
+                }
             }
             .selected {
                 border-color: $secondary-color;
@@ -139,7 +152,6 @@ header {
     }
 }
 
-
 /*----------------Info Window---------------*/
 
 #place-details {
@@ -147,8 +159,10 @@ header {
     ul {
         list-style-type: none;
         #place-name {
-            font-family: $primary-font;
-            font-size: 18px;
+            font: {
+                family: $primary-font;
+                size: 18px;
+            }
             color: #000;
         }
     }
@@ -161,8 +175,10 @@ footer {
     position: relative;
     bottom: 0;
     left: 0;
-    font-size: 17px;
-    font-family: $primary-font;
+    font: {
+        family: $primary-font;
+        size: 17px;
+    }
     overflow: auto;
     ul {
         margin: 0px;

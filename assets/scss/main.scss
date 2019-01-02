@@ -125,8 +125,11 @@ header {
             button {
                 width: 90%;
                 margin-top: 10px;
-                font-size: 75%;
                 @extend %btn;
+                font: {
+                    family: $secondary-font;
+                    size: 75%;
+                };
             }
             .selected {
                 border-color: $secondary-color;

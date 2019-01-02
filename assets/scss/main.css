@@ -108,6 +108,7 @@ header {
       .map-wrapper .menu .place-type button {
         width: 90%;
         margin-top: 10px;
+        font-family: "Roboto", sans-serif;
         font-size: 75%; }
       .map-wrapper .menu .place-type .selected {
         border-color: #002bff; }

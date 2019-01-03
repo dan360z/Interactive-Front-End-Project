@@ -171,7 +171,7 @@ header {
 /*----------------Footer---------------*/
 
 footer {
-    height: 5vh;
+    min-height: 5vh;
     position: relative;
     bottom: 0;
     left: 0;
@@ -179,7 +179,6 @@ footer {
         family: $primary-font;
         size: 17px;
     }
-    overflow: auto;
     ul {
         margin: 0px;
         p {
@@ -204,7 +203,7 @@ footer {
 
 @media (min-width: 576px) {
     .map-header {
-        height: 7vh;
+        min-height: 7vh;
     }
     .map-wrapper {
         #map {
@@ -212,6 +211,6 @@ footer {
         }
     }
     footer {
-        height: 4vh;
+        min-height: 4vh;
     }
 }

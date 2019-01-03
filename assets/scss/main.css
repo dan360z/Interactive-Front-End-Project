@@ -134,13 +134,12 @@ header {
 
 /*----------------Footer---------------*/
 footer {
-  height: 5vh;
+  min-height: 5vh;
   position: relative;
   bottom: 0;
   left: 0;
   font-family: "Kaushan Script", cursive;
-  font-size: 17px;
-  overflow: auto; }
+  font-size: 17px; }
   footer ul {
     margin: 0px; }
     footer ul p {
@@ -157,12 +156,12 @@ footer {
 /*----------------Media Queries---------------*/
 @media (min-width: 576px) {
   .map-header {
-    height: 7vh; }
+    min-height: 7vh; }
 
   .map-wrapper #map {
     height: 89vh; }
 
   footer {
-    height: 4vh; } }
+    min-height: 4vh; } }
 
 /*# sourceMappingURL=main.css.map */

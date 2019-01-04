@@ -44,11 +44,12 @@ header {
         height: 30vh;
     }
     section:nth-child(2) {
-        height: 70vh;
+        min-height: 70vh;
     }
 }
 
 .intro-wrapper {
+    margin-bottom: 40px;
     h3 {
         font: {
             family: $primary-font;
@@ -56,7 +57,7 @@ header {
         }
     }
     p {
-        margin-bottom: 45px;
+        margin-bottom: 40px;
     }
     a {
         @extend %btn;
@@ -145,7 +146,7 @@ header {
                 @extend %btn;
                 font: {
                     family: $secondary-font;
-                    size: 75%;
+                    size: 15px;
                 }
             }
             .selected {

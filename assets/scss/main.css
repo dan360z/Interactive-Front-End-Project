@@ -42,16 +42,18 @@ header {
 header section:first-child {
   height: 30vh; }
 header section:nth-child(2) {
-  height: 70vh; }
+  min-height: 70vh; }
 
-.intro-wrapper h3 {
-  font-family: "Kaushan Script", cursive;
-  font-size: 28px; }
-.intro-wrapper p {
-  margin-bottom: 45px; }
-.intro-wrapper a {
-  border: 1px solid #fff;
-  text-decoration: none; }
+.intro-wrapper {
+  margin-bottom: 40px; }
+  .intro-wrapper h3 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 28px; }
+  .intro-wrapper p {
+    margin-bottom: 40px; }
+  .intro-wrapper a {
+    border: 1px solid #fff;
+    text-decoration: none; }
 
 /*--------------Search and filters---------------*/
 .map-header {
@@ -118,7 +120,7 @@ header section:nth-child(2) {
         width: 90%;
         margin-top: 10px;
         font-family: "Roboto", sans-serif;
-        font-size: 75%; }
+        font-size: 15px; }
       .map-wrapper .menu .place-type .selected {
         border-color: #000; }
 

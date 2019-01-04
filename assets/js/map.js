@@ -20,7 +20,7 @@ function initMap() {
     //Place search---------------------------------------
     var searchBox = new google.maps.places.SearchBox(document.getElementById('searchPlace'));
 
-    //place change event on searchInput------------------------------------
+    //Place change event on searchInput------------------------------------
     google.maps.event.addListener(searchBox, 'places_changed', function() {
         var places = searchBox.getPlaces();
         //Bounds---------------------------------------------------

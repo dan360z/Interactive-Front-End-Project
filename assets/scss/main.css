@@ -33,23 +33,25 @@ header {
 
 .logo {
   border: 1px solid #fff;
-  margin: 80px 0px 50px 0px;
   padding: 5px 15px;
   display: inline-block;
   font-family: "Kaushan Script", cursive;
   font-size: 45px; }
 
 /*----------------Intoduction Section---------------*/
-.intro-wrapper {
-  margin-bottom: 80px; }
-  .intro-wrapper h3 {
-    font-family: "Kaushan Script", cursive;
-    font-size: 28px; }
-  .intro-wrapper p {
-    margin-bottom: 45px; }
-  .intro-wrapper a {
-    border: 1px solid #fff;
-    text-decoration: none; }
+header section:first-child {
+  height: 30vh; }
+header section:nth-child(2) {
+  height: 70vh; }
+
+.intro-wrapper h3 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 28px; }
+.intro-wrapper p {
+  margin-bottom: 45px; }
+.intro-wrapper a {
+  border: 1px solid #fff;
+  text-decoration: none; }
 
 /*--------------Search and filters---------------*/
 .map-header {

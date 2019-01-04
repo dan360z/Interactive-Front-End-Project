@@ -29,7 +29,6 @@ header {
 
 .logo {
     @include border($primary-color);
-    margin: 80px 0px 50px 0px;
     padding: 5px 15px;
     display: inline-block;
     font: {
@@ -40,8 +39,16 @@ header {
 
 /*----------------Intoduction Section---------------*/
 
+header {
+    section:first-child {
+        height: 30vh;
+    }
+    section:nth-child(2) {
+        height: 70vh;
+    }
+}
+
 .intro-wrapper {
-    margin-bottom: 80px;
     h3 {
         font: {
             family: $primary-font;
@@ -199,6 +206,7 @@ footer {
 /*----------------Media Queries---------------*/
 
 @media (min-width: 576px) {
+
     .map-header {
         min-height: 7vh;
     }

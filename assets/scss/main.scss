@@ -101,7 +101,7 @@ header {
 
 .search-container {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     @include gradient($lightBlueDarkBlue);
     .search {
         width: 85%;
@@ -134,9 +134,9 @@ header {
         top: 0;
         left: 0;
         width: 100%;
+        z-index: 3;
         max-height: 100%;
-        padding-bottom: 20px;
-        //height: 100%;
+        padding-bottom: 20px; //height: 100%;
         @include gradient($lightOragneDarkOrange);
         overflow: auto;
         .place-type {
@@ -158,6 +158,24 @@ header {
         }
     }
 }
+
+/*----------------Tap Map Instruction Popup---------------*/
+
+#tapMap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    .wrapper {
+        height: 100%;
+        h4 {
+            font-weight: 300;
+        }
+    }
+}
+
 
 /*----------------Info Window---------------*/
 

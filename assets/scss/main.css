@@ -82,7 +82,7 @@ header section:nth-child(2) {
 /*----------------Map and components---------------*/
 .search-container {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   background-image: linear-gradient(to right, #00c6ff, #0072ff); }
   .search-container .search {
     width: 85%;
@@ -110,6 +110,7 @@ header section:nth-child(2) {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 3;
     max-height: 100%;
     padding-bottom: 20px;
     background-image: linear-gradient(to right, #fe8c00, #f83600);
@@ -124,6 +125,19 @@ header section:nth-child(2) {
         word-wrap: break-word; }
       .map-wrapper .menu .place-type .selected {
         border-color: #000; }
+
+/*----------------Tap Map Instruction Popup---------------*/
+#tapMap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
+  #tapMap .wrapper {
+    height: 100%; }
+    #tapMap .wrapper h4 {
+      font-weight: 300; }
 
 /*----------------Info Window---------------*/
 #place-details {

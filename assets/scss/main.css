@@ -1,5 +1,3 @@
-/*font-family: 'Kaushan Script', cursive;
-font-family: 'Open Sans Condensed', sans-serif;*/
 .intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
   background-color: rgba(0, 0, 0, 0.3); }
 

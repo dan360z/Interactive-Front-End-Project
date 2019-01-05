@@ -29,6 +29,7 @@ function initMap() {
         for (i = 0; place = places[i]; i++) {
             bounds.extend(place.geometry.location);
         }
+        $('.search-container').slideUp(); //Hides search box when user searches a location----------
         //Fit to the bound-----------------------------------------
         map.fitBounds(bounds);
         map.setZoom(14);

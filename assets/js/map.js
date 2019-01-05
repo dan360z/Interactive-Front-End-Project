@@ -190,5 +190,5 @@ $('.place-type').children().click(function() {
     $('#tapMap').show();
     setTimeout(function() {
         $('#tapMap').hide();
-    }, 2500);
+    }, 2000);
 });

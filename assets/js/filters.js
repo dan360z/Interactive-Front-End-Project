@@ -6,9 +6,9 @@ $(document).ready(function() {
    $('.menu').hide();
    $('#tapMap').hide();
    $('#selectType').hide();
-   
+
    //Hides one dropdown menu when another shows---------------------------------------------
-   
+
    $('#search-btn').click(function() {
       $('.menu').slideUp();
       $('.search-container').slideToggle();
@@ -18,13 +18,9 @@ $(document).ready(function() {
       $('.search-container').slideUp();
       $('.menu').slideToggle();
    });
-   
-   //Shows a pop up that instructs user to click or tap on the map when they have selected a place type-----------
-   
-   
-   
-    //Hides dropdown menu when user selects a place type--------------------------------------
-   
+
+   //Hides dropdown menu when user selects a place type--------------------------------------
+
    $('.place-type').children().click(function() {
       setTimeout(function() {
          $('.menu').slideToggle();
@@ -32,7 +28,7 @@ $(document).ready(function() {
    });
 
    //Toggles the selected class for each place type------------------------------------------
-   
+
    $('#accomodation').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');

@@ -127,16 +127,16 @@ header section:nth-child(2) {
         border-color: #000; }
 
 /*----------------Tap Map Instruction Popup---------------*/
-#tapMap {
+.popup {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1; }
-  #tapMap .wrapper {
+  .popup .wrapper {
     height: 100%; }
-    #tapMap .wrapper h4 {
+    .popup .wrapper h4 {
       font-weight: 300; }
 
 /*----------------Info Window---------------*/

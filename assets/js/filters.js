@@ -5,6 +5,7 @@ $(document).ready(function() {
    $('.search-container').hide();
    $('.menu').hide();
    $('#tapMap').hide();
+   $('#selectType').hide();
    
    //Hides one dropdown menu when another shows---------------------------------------------
    
@@ -18,7 +19,7 @@ $(document).ready(function() {
       $('.menu').slideToggle();
    });
    
-   //Instructs user to click or tap on the map when they have selected a place type-----------
+   //Shows a pop up that instructs user to click or tap on the map when they have selected a place type-----------
    
    $('.place-type').children().click(function() {
       $('#tapMap').show();
@@ -109,5 +110,4 @@ $(document).ready(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
    });
-
 });

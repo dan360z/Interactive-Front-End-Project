@@ -39,7 +39,7 @@ function initMap() {
     google.maps.event.addListener(map, 'click', function(event) {
         map.panTo(event.latLng);
         map.setZoom(15);
-        clearMarkers();  //Clears markers when the user clicks
+        clearMarkers(); //Clears markers when the user clicks
         filterResults(); //Runs filterResults------------
     });
 
@@ -111,7 +111,10 @@ function filterResults() {
         searchPlaces();
     }
     else {
-        alert('Please select an estblishment type!');
+        $('#selectType').show();
+        setTimeout(function() {
+            $('#selectType').hide();
+        }, 2500);
     }
 }
 

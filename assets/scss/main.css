@@ -167,6 +167,7 @@ footer {
     footer ul a {
       color: #fff; }
       footer ul a:hover {
+        color: #000;
         background-color: transparent;
         border: none; }
 

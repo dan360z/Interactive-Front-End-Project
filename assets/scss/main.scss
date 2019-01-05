@@ -217,6 +217,7 @@ footer {
             color: $primary-color;
             &:hover {
                 @extend %mouseOver;
+                color: $secondary-color;
                 background-color: transparent;
                 border: none;
             }

@@ -37,9 +37,10 @@ function initMap() {
     //Nearby establishment search by click---------------------------
     service = new google.maps.places.PlacesService(map);
     google.maps.event.addListener(map, 'click', function(event) {
+        $('.search-container').slideUp(); //Hides search box when user clicks to search----------
         map.panTo(event.latLng);
         map.setZoom(15);
-        clearMarkers(); //Clears markers when the user clicks
+        clearMarkers(); //Clears markers when the user clicks------------
         filterResults(); //Runs filterResults------------
     });
 
@@ -111,6 +112,7 @@ function filterResults() {
         searchPlaces();
     }
     else {
+        //Shows a pop up that instructs user to select a place type-----------------------
         $('#selectType').show();
         setTimeout(function() {
             $('#selectType').hide();
@@ -180,3 +182,13 @@ function showInfoWindow() {
 function setPlaceDetails(place) {
     document.getElementById('place-name').textContent = place.name;
 }
+
+//Shows a pop up that instructs user to click or tap on the map when they have selected a place type----------------
+
+$('.place-type').children().click(function() {
+    clearMarkers();
+    $('#tapMap').show();
+    setTimeout(function() {
+        $('#tapMap').hide();
+    }, 2500);
+});

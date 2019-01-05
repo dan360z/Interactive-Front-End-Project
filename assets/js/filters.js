@@ -21,12 +21,7 @@ $(document).ready(function() {
    
    //Shows a pop up that instructs user to click or tap on the map when they have selected a place type-----------
    
-   $('.place-type').children().click(function() {
-      $('#tapMap').show();
-      setTimeout(function() {
-         $('#tapMap').hide();
-      }, 2500);
-   });
+   
    
     //Hides dropdown menu when user selects a place type--------------------------------------
    

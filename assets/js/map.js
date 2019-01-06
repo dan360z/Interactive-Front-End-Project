@@ -29,7 +29,8 @@ function initMap() {
         for (i = 0; place = places[i]; i++) {
             bounds.extend(place.geometry.location);
         }
-        $('.search-container').slideUp(); //Hides search box after user searches a location----------
+        //Hides search box after user searches a location----------
+        $('.search-container').slideUp();
         //Fit to the bound-----------------------------------------
         map.fitBounds(bounds);
         map.setZoom(14);
@@ -143,7 +144,16 @@ function searchPlaces() {
                 setTimeout(placeMarkers(i), i * 60);
             }
         }
-        if (!results[0]) { //If there are no results, this displays no results info window------------
+        //If there are results, this displays an info window showing the amount of results to the user--------
+        if (results[0]) {
+            $('#count').text(results.length);
+            $('#results').show();
+            setTimeout(function() {
+                $('#results').hide();
+            }, 2000);
+        }
+        //If there are no results, this displays a no results info window------------
+        if (!results[0]) {
             $('#noResults').show();
             setTimeout(function() {
                 $('#noResults').hide();
@@ -187,7 +197,7 @@ function setPlaceDetails(place) {
     document.getElementById('place-name').textContent = place.name;
 }
 
-//Shows a pop up that instructs user to click or tap on the map when they have selected a place type----------------
+//Shows a pop up window instructing the  user to click or tap on the map when they have selected a place type----------------
 $('.place-type').children().click(function() {
     clearMarkers();
     $('#tapMap').show();

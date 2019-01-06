@@ -4,8 +4,9 @@ $(document).ready(function() {
 
    $('.search-container').hide();
    $('.menu').hide();
-   $('#tapMap').hide();
    $('#selectType').hide();
+   $('#tapMap').hide();
+   $('#results').hide();
    $('#noResults').hide();
 
    //Hides one dropdown menu when another shows---------------------------------------------
@@ -20,7 +21,7 @@ $(document).ready(function() {
       $('.menu').slideToggle();
    });
 
-   //Hides dropdown menu when user selects a place type--------------------------------------
+   //Hides the Places dropdown menu when user selects a place type--------------------------------------
 
    $('.place-type').children().click(function() {
       setTimeout(function() {
@@ -33,91 +34,91 @@ $(document).ready(function() {
    $('#accomodation').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('accomodations');
+      $('#place, #placeCount').text('accomodations');
    });
    $('#atm').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('Atms');
+      $('#place, #placeCount').text('Atms');
    });
    $('#store').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('stores');
+      $('#place, #placeCount').text('stores');
    });
    $('#bar').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('bars');
+      $('#place, #placeCount').text('bars');
    });
    $('#restaurant').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('restaurants');
+      $('#place, #placeCount').text('restaurants');
    });
    $('#night-club').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('night clubs');
+      $('#place, #placeCount').text('night clubs');
    });
    $('#casino').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('casinos');
+      $('#place, #placeCount').text('casinos');
    });
    $('#bowling').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('bowling alleys');
+      $('#place, #placeCount').text('bowling alleys');
    });
    $('#shopping').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('shopping malls');
+      $('#place, #placeCount').text('shopping malls');
    });
    $('#park').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('parks');
+      $('#place, #placeCount').text('parks');
    });
    $('#amusement-park').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('amusement parks');
+      $('#place, #placeCount').text('amusement parks');
    });
    $('#museum').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('museums');
+      $('#place, #placeCount').text('museums');
    });
    $('#aquarium').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('aquariums');
+      $('#place, #placeCount').text('aquariums');
    });
    $('#zoo').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('zoos');
+      $('#place, #placeCount').text('zoos');
    });
    $('#train-station').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('train stations');
+      $('#place, #placeCount').text('train stations');
    });
    $('#taxi-stand').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('taxi stands');
+      $('#place, #placeCount').text('taxi stands');
    });
    $('#transit-station').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('transit stations');
+      $('#place, #placeCount').text('transit stations');
    });
    $('#subway-station').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place').text('subway stations');
+      $('#place, #placeCount').text('subway stations');
    });
 });

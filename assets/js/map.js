@@ -29,7 +29,7 @@ function initMap() {
         for (i = 0; place = places[i]; i++) {
             bounds.extend(place.geometry.location);
         }
-        $('.search-container').slideUp(); //Hides search box when user searches a location----------
+        $('.search-container').slideUp(); //Hides search box after user searches a location----------
         //Fit to the bound-----------------------------------------
         map.fitBounds(bounds);
         map.setZoom(14);
@@ -143,8 +143,11 @@ function searchPlaces() {
                 setTimeout(placeMarkers(i), i * 60);
             }
         }
-        if (!results[0]) {
-            alert('No results nearby!');
+        if (!results[0]) { //If there are no results, this displays no results info window------------
+            $('#noResults').show();
+            setTimeout(function() {
+                $('#noResults').hide();
+            }, 2000);
         }
     });
 }
@@ -185,11 +188,10 @@ function setPlaceDetails(place) {
 }
 
 //Shows a pop up that instructs user to click or tap on the map when they have selected a place type----------------
-
 $('.place-type').children().click(function() {
     clearMarkers();
     $('#tapMap').show();
     setTimeout(function() {
         $('#tapMap').hide();
-    }, 2000);
+    }, 1500);
 });

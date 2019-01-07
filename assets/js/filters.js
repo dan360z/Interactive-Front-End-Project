@@ -34,7 +34,7 @@ $(document).ready(function() {
    $('#accomodation').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place, #placeCount').text('accomodations');
+      $('#place, #placeCount').text('accomodations');//Adds the place type name to the #place and #placeCount placeholers in the info windows------------
    });
    $('#atm').click(function() {
       $('button').removeClass('selected');

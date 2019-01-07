@@ -41,28 +41,27 @@ header {
 
 header {
     section:first-child {
-        height: 30vh;
+        height: 25vh;
     }
     section:nth-child(2) {
-        min-height: 70vh;
+        min-height: 75vh;
     }
-}
-
-.intro-wrapper {
-    margin-bottom: 40px;
-    h3 {
-        font: {
-            family: $primary-font;
-            size: 28px;
-        }
-    }
-    p {
+    .intro-wrapper {
         margin-bottom: 40px;
-    }
-    a {
-        @extend %btn;
-        @include border($primary-color);
-        text-decoration: none;
+        h3 {
+            font: {
+                family: $primary-font;
+                size: 22px;
+            }
+        }
+        p {
+            margin-bottom: 40px;
+        }
+        a {
+            @extend %btn;
+            @include border($primary-color);
+            text-decoration: none;
+        }
     }
 }
 

@@ -1,14 +1,14 @@
-.intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
+header .intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
   background-color: rgba(0, 0, 0, 0.3); }
 
-.intro-wrapper a, .map-header .map-btns, .map-wrapper .menu .place-type button {
+header .intro-wrapper a, .map-header .map-btns, .map-wrapper .menu .place-type button {
   border: 1px solid #fff;
   padding: 4px 12px;
   color: #fff;
   background-color: transparent;
   font-family: "Kaushan Script", cursive; }
 
-.intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover {
+header .intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover {
   border: 1px solid #000;
   cursor: pointer;
   -moz-transition: all 0.20s ease-in-out;
@@ -40,18 +40,17 @@ header {
 
 /*----------------Intoduction Section---------------*/
 header section:first-child {
-  height: 30vh; }
+  height: 25vh; }
 header section:nth-child(2) {
-  min-height: 70vh; }
-
-.intro-wrapper {
+  min-height: 75vh; }
+header .intro-wrapper {
   margin-bottom: 40px; }
-  .intro-wrapper h3 {
+  header .intro-wrapper h3 {
     font-family: "Kaushan Script", cursive;
-    font-size: 28px; }
-  .intro-wrapper p {
+    font-size: 22px; }
+  header .intro-wrapper p {
     margin-bottom: 40px; }
-  .intro-wrapper a {
+  header .intro-wrapper a {
     border: 1px solid #fff;
     text-decoration: none; }
 

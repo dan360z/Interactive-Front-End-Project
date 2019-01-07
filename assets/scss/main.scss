@@ -192,17 +192,19 @@ header {
     }
 }
 
-/*----------------Footer---------------*/
+/*----------------Footer-------------------------------------*/
 
 footer {
     min-height: 5vh;
     position: relative;
     bottom: 0;
     left: 0;
+    background-color: #eef2f3;
     font: {
         family: $primary-font;
         size: 17px;
     }
+    color: $secondary-color;
     ul {
         margin: 0px;
         p {
@@ -213,10 +215,10 @@ footer {
             }
         }
         a {
-            color: $primary-color;
+            color: $secondary-color;
             &:hover {
                 @extend %mouseOver;
-                color: $secondary-color;
+                color: $primary-color;
                 background-color: transparent;
                 border: none;
             }

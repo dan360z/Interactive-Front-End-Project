@@ -148,14 +148,16 @@ header .intro-wrapper {
       font-size: 18px;
       color: #000; }
 
-/*----------------Footer---------------*/
+/*----------------Footer-------------------------------------*/
 footer {
   min-height: 5vh;
   position: relative;
   bottom: 0;
   left: 0;
+  background-color: #eef2f3;
   font-family: "Kaushan Script", cursive;
-  font-size: 17px; }
+  font-size: 17px;
+  color: #000; }
   footer ul {
     margin: 0px; }
     footer ul p {
@@ -164,9 +166,9 @@ footer {
       footer ul p span {
         font-family: "Roboto", sans-serif; }
     footer ul a {
-      color: #fff; }
+      color: #000; }
       footer ul a:hover {
-        color: #000;
+        color: #fff;
         background-color: transparent;
         border: none; }
 

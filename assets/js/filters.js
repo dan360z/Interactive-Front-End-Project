@@ -1,6 +1,12 @@
 $(document).ready(function() {
+   
+   //When a user clicks the 'lets's go' button the page will smoothly scroll to the map-------
 
-   //Hides dropdown menus and popups---------------------------------
+   $('#scrollToMap').click(function() {
+      $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+   });
+
+   //Hides dropdown menus and popups when the page loads---------------------------------
 
    $('.search-container').hide();
    $('.menu').hide();
@@ -34,7 +40,7 @@ $(document).ready(function() {
    $('#accomodation').click(function() {
       $('button').removeClass('selected');
       $(this).addClass('selected');
-      $('#place, #placeCount').text('accomodations');//Adds the place type name to the #place and #placeCount placeholers in the info windows------------
+      $('#place, #placeCount').text('accomodations'); //Adds the place type name to the #place and #placeCount placeholers in the info windows------------
    });
    $('#atm').click(function() {
       $('button').removeClass('selected');

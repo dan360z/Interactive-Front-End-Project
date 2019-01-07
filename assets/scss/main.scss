@@ -17,11 +17,9 @@ body {
     @extend %overlay;
 }
 
-/*----------------Header---------------*/
-
+/*----------------Header---------------*/ //needs organising!
 header {
-    background: url(https://www.hiusa.org/images/uploads/explore-the-world-image.jpg) no-repeat center center scroll;
-    //background: url(../images/beach.jpg) no-repeat center center scroll;
+    background: url(https://www.hiusa.org/images/uploads/explore-the-world-image.jpg) no-repeat center center scroll; //background: url(../images/beach.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -66,29 +64,31 @@ header {
     }
 }
 
+/*--------------Main--------------------*/
+
 /*--------------Search and filters---------------*/
 
 .map-header {
-    min-height: 19vh;
+    height: 22vh;
     background-color: #eef2f3;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     .logo2 {
         font-family: $primary-font;
         @include border(#000);
-        margin: 7px 0px;
+        margin: 0;
         padding: 2px;
         width: 150px;
         color: #000;
     }
     .map-btns {
-        margin: 10px 10px;
         font-size: 16px;
         @extend %btn;
         @include border(#0ED2F7);
         @include gradient($lightBlueDarkBlue);
     }
     #places-btn {
+        margin-left: 10px;
         @include border(#fb6000);
         @include gradient($lightOragneDarkOrange);
         &:hover {
@@ -127,7 +127,7 @@ header {
 .map-wrapper {
     padding: 0;
     #map {
-        height: 76vh;
+        height: 73vh;
     }
     .menu {
         position: absolute;
@@ -196,33 +196,26 @@ header {
 /*----------------Footer-------------------------------------*/
 
 footer {
-    min-height: 5vh;
-    position: relative;
-    bottom: 0;
-    left: 0;
+    height: 5vh;
     background-color: #eef2f3;
+    overflow: auto;
+    color: $secondary-color;
     font: {
         family: $primary-font;
-        size: 17px;
+        weight: 300;
+        size: 90%;
     }
-    color: $secondary-color;
-    ul {
+    p {
         margin: 0px;
-        p {
-            margin: 0px;
-            font-weight: 300;
-            span {
-                font-family: $secondary-font;
-            }
-        }
-        a {
-            color: $secondary-color;
-            &:hover {
-                @extend %mouseOver;
-                color: $primary-color;
-                background-color: transparent;
-                border: none;
-            }
+    }
+    a {
+        margin-left: 5px;
+        color: $secondary-color;
+        &:hover {
+            @extend %mouseOver;
+            color: $primary-color;
+            background-color: transparent;
+            border: none;
         }
     }
 }
@@ -232,14 +225,11 @@ footer {
 @media (min-width: 576px) {
 
     .map-header {
-        min-height: 7vh;
+        height: 10vh;
     }
     .map-wrapper {
         #map {
-            height: 89vh;
+            height: 85vh;
         }
-    }
-    footer {
-        min-height: 4vh;
     }
 }

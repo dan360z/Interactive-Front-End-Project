@@ -1,4 +1,4 @@
-header .intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
+header .intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
   background-color: rgba(0, 0, 0, 0.3); }
 
 header .intro-wrapper a, .map-header .map-btns, .map-wrapper .menu .place-type button {
@@ -8,7 +8,7 @@ header .intro-wrapper a, .map-header .map-btns, .map-wrapper .menu .place-type b
   background-color: transparent;
   font-family: "Kaushan Script", cursive; }
 
-header .intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer ul a:hover {
+header .intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer a:hover {
   border: 1px solid #000;
   cursor: pointer;
   -moz-transition: all 0.20s ease-in-out;
@@ -54,25 +54,26 @@ header .intro-wrapper {
     border: 1px solid #fff;
     text-decoration: none; }
 
+/*--------------Main--------------------*/
 /*--------------Search and filters---------------*/
 .map-header {
-  min-height: 19vh;
+  height: 22vh;
   background-color: #eef2f3;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000; }
   .map-header .logo2 {
     font-family: "Kaushan Script", cursive;
     border: 1px solid #000;
-    margin: 7px 0px;
+    margin: 0;
     padding: 2px;
     width: 150px;
     color: #000; }
   .map-header .map-btns {
-    margin: 10px 10px;
     font-size: 16px;
     border: 1px solid #0ED2F7;
     background-image: linear-gradient(to right, #00c6ff, #0072ff); }
   .map-header #places-btn {
+    margin-left: 10px;
     border: 1px solid #fb6000;
     background-image: linear-gradient(to right, #fe8c00, #f83600); }
     .map-header #places-btn:hover {
@@ -103,7 +104,7 @@ header .intro-wrapper {
 .map-wrapper {
   padding: 0; }
   .map-wrapper #map {
-    height: 76vh; }
+    height: 73vh; }
   .map-wrapper .menu {
     position: absolute;
     top: 0;
@@ -150,37 +151,29 @@ header .intro-wrapper {
 
 /*----------------Footer-------------------------------------*/
 footer {
-  min-height: 5vh;
-  position: relative;
-  bottom: 0;
-  left: 0;
+  height: 5vh;
   background-color: #eef2f3;
+  overflow: auto;
+  color: #000;
   font-family: "Kaushan Script", cursive;
-  font-size: 17px;
-  color: #000; }
-  footer ul {
+  font-weight: 300;
+  font-size: 90%; }
+  footer p {
     margin: 0px; }
-    footer ul p {
-      margin: 0px;
-      font-weight: 300; }
-      footer ul p span {
-        font-family: "Roboto", sans-serif; }
-    footer ul a {
-      color: #000; }
-      footer ul a:hover {
-        color: #fff;
-        background-color: transparent;
-        border: none; }
+  footer a {
+    margin-left: 5px;
+    color: #000; }
+    footer a:hover {
+      color: #fff;
+      background-color: transparent;
+      border: none; }
 
 /*----------------Media Queries---------------*/
 @media (min-width: 576px) {
   .map-header {
-    min-height: 7vh; }
+    height: 10vh; }
 
   .map-wrapper #map {
-    height: 89vh; }
-
-  footer {
-    min-height: 4vh; } }
+    height: 85vh; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-    <!------Meta Data---------->
+    <!--Meta Data-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!------Bootstrap 4.1.3 CDN Link---------------->
+    <!--Bootstrap 4.1.3 CDN Link-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!------Font Awesome 5.5.0 CDN Link ------------>
+    <!--Font Awesome 5.5.0 CDN Link-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <!------Google Fonts CDN----------------------->
+    <!--Google Fonts CDN-->
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Roboto:300,400,500,700" rel="stylesheet">
-    <!------My Css Link--------------------->
+    <!--My Css Link-->
     <link rel="stylesheet" href="assets/scss/main.css" type="text/css" />
-    <!------Page Title--------->
+    <!--Page Title-->
     <title>Let's Explore</title>
 
 </head>
@@ -22,14 +22,14 @@
 <body>
 
     <header class="container-fluid">
-        <!-----Main logo---->
+        <!--Main logo-->
         <section class="row over-lay">
             <div class="col-12 text-center my-auto">
                 <h1 class="logo">Let's Explore</h1>
             </div>
         </section>
-        <!----/Main logo---->
-        <!-------Welcome paragraph about------->
+        <!--/Main logo-->
+        <!--Welcome paragraph about-->
         <section class="row over-lay">
             <div class="col-10 offset-1 col-lg-6 offset-lg-3 text-center intro-wrapper">
                 <h3>Welcome!</h3>
@@ -38,14 +38,14 @@
                 <a href="#map">Lets go</a>
             </div>
         </section>
-        <!-------/Welcome paragraph about------->
+        <!--/Welcome paragraph about-->
     </header>
 
     <main class="container-fluid">
 
-        <!-------Map section------->
+        <!--Map section-->
 
-        <!--------------Search and Places Button---------------->
+        <!--Search and Places Button-->
         <section class="row map-header">
             <div class="col-12 col-sm-6">
                 <h4 class="logo2">Let's Explore</h4>
@@ -55,20 +55,20 @@
                 <button class="map-btns" id="places-btn">Places</button>
             </div>
         </section>
-        <!--------------Search---------------->
+        <!--Search-->
         <section class="row text-center">
             <div class="col-12 search-container">
                 <h4 class="menu-heading">Search Your Destination</h4>
                 <input class="search" id="searchPlace" type="text" placeholder="Search">
             </div>
         </section>
-        <!--------------/Search---------------->
+        <!--/Search-->
         <section class="row">
             <div class="col-12 map-wrapper">
-                <!---------------Map---------------->
+                <!--Map-->
                 <div id="map"></div>
-                <!--------------/Map---------------->
-                <!--------------Places menu---------------->
+                <!--/Map-->
+                <!--Places menu-->
                 <div class="menu container-fluid text-center">
                     <div class="row">
                         <h4 class="col-12 menu-heading">Select An Establishment</h4>
@@ -94,9 +94,9 @@
                         <div class="col-6 col-lg-2 place-type"><button id="subway-station">Subway Stations</button></div>
                     </div>
                 </div>
-                <!--------------/Places menu---------------->
+                <!--/Places menu-->
 
-                <!--------------Insturcts user to select an establishment type---------------->
+                <!--Insturcts user to select an establishment type-->
                 <div class="container-fluid over-lay popup" id="selectType">
                     <div class="row wrapper">
                         <div class="col-12 text-center my-auto">
@@ -104,8 +104,8 @@
                         </div>
                     </div>
                 </div>
-                <!--------------/Insturcts user to select an establishment type---------------->
-                <!--------------Insturcts user to tap the map to search---------------->
+                <!--/Insturcts user to select an establishment type-->
+                <!--Insturcts user to tap the map to search-->
                 <div class="container-fluid over-lay popup" id="tapMap">
                     <div class="row wrapper">
                         <div class="col-12 text-center my-auto">
@@ -113,8 +113,8 @@
                         </div>
                     </div>
                 </div>
-                <!--------------/Insturcts user to tap the map to search---------------->
-                <!--------------Shows the user the amount of results displayed---------------->
+                <!--/Insturcts user to tap the map to search-->
+                <!--Shows the user the amount of results displayed-->
                 <div class="container-fluid over-lay popup" id="results">
                     <div class="row wrapper">
                         <div class="col-12 text-center my-auto">
@@ -122,8 +122,8 @@
                         </div>
                     </div>
                 </div>
-                <!--------------/Shows the user the amount of results displayed---------------->
-                <!--------------Shows the user that there are no establishments of the selected type nearby---------------->
+                <!--/Shows the user the amount of results displayed-->
+                <!--Shows the user that there are no establishments of the selected type nearby-->
                 <div class="container-fluid over-lay popup" id="noResults">
                     <div class="row wrapper">
                         <div class="col-12 text-center my-auto">
@@ -131,10 +131,10 @@
                         </div>
                     </div>
                 </div>
-                <!--------------/Shows the user that there are no establishments of the selected type nearby---------------->
+                <!--/Shows the user that there are no establishments of the selected type nearby-->
             </div>
 
-            <!--------------Info window---------------->
+            <!--Info window-->
             <div style="display: none;">
                 <div id="place-details">
                     <ul>
@@ -142,13 +142,13 @@
                     </ul>
                 </div>
             </div>
-            <!--------------/Info window---------------->
+            <!--/Info window-->
         </section>
 
     </main>
 
     <footer class="container-fluid text-center">
-        <!---------------Footer Credits & Github Link---------------->
+        <!--Footer Credits & Github Link-->
         <ul class="list-inline">
             <li class="list-inline-item">
                 <p><span>© </span>2019</p>
@@ -160,16 +160,16 @@
                 <a href="https://github.com/dan360z" target="_blank"><i class="fab fa-github"></i></a>
             </li>
         </ul>
-        <!---------------/Footer Credits & Github Link---------------->
+        <!--/Footer Credits & Github Link-->
     </footer>
 
-    <!------jQuery CDN--------------->
+    <!--jQuery CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!------Filters JS Link--------------->
-    <script type="text/javascript" src="assets/js/filters.js"></script>
-    <!------Map JS Link--------------->
-    <script type="text/javascript" src="assets/js/map.js"></script>
-    <!------Google Maps API--------------->
+    <!--Filters JS Link-->
+    <script src="assets/js/filters.js"></script>
+    <!--Map JS Link-->
+    <script src="assets/js/map.js"></script>
+    <!--Google Maps API-->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuqJsulgfltPR4aIrKnRZMhOf6TTlUSOo&libraries=places&callback=initMap"></script>
 </body>
 

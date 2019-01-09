@@ -153,6 +153,7 @@ header .intro-wrapper {
 footer {
   height: 5vh;
   background-color: #eef2f3;
+  border-top: 1px solid #000;
   overflow: auto;
   color: #000;
   font-family: "Kaushan Script", cursive;
@@ -184,10 +185,10 @@ footer {
     height: 25vh; }
 
   .map-wrapper #map {
-    height: 65vh; }
+    height: 67vh; }
 
   footer {
-    height: 10vh; } }
+    height: 8vh; } }
 /*----------------Media Queries for slightly bigger than usual mobie devices when rotated horizontally---------------*/
 @media (max-height: 450px) and (min-width: 576px) {
   .map-header {

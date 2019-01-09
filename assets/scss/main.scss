@@ -69,7 +69,7 @@ header {
 /*--------------Search and filters---------------*/
 
 .map-header {
-    height: 22vh;
+    height: 15vh;
     background-color: #eef2f3;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
@@ -127,7 +127,7 @@ header {
 .map-wrapper {
     padding: 0;
     #map {
-        height: 73vh;
+        height: 80vh;
     }
     .menu {
         position: absolute;
@@ -220,16 +220,56 @@ footer {
     }
 }
 
-/*----------------Media Queries---------------*/
+/*----------------Media Queries for large screens---------------*/
 
 @media (min-width: 576px) {
 
     .map-header {
-        height: 10vh;
+        height: 5vh;
     }
     .map-wrapper {
         #map {
-            height: 85vh;
+            height: 92vh;
         }
     }
+    footer {
+        height: 3vh;
+    }
 }
+
+/*----------------Media Queries for small mobile devices when rotated horizontally---------------*/
+
+@media (max-height: 450px) and (max-width: 576px) {
+
+    .map-header {
+        height: 25vh;
+    }
+    .map-wrapper {
+        #map {
+            height: 65vh;
+        }
+    }
+    
+    footer {
+        height: 10vh;
+    }
+}
+
+/*----------------Media Queries for slightly bigger than usual mobie devices when rotated horizontally---------------*/
+
+@media (max-height: 450px) and (min-width: 576px) {
+
+    .map-header {
+        height: 14vh;
+    }
+    .map-wrapper {
+        #map {
+            height: 79vh;
+        }
+    }
+    
+    footer {
+        height: 7vh;
+    }
+}
+

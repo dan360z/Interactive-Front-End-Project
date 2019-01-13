@@ -1,14 +1,14 @@
-header .intro-wrapper #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul #url:hover, footer a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
+header #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul #url:hover, footer a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
   background-color: rgba(0, 0, 0, 0.3); }
 
-header .intro-wrapper #scrollToMap, .map-header .map-btns, .map-wrapper .menu .place-type button, #place-details ul #url {
+header #scrollToMap, .map-header .map-btns, .map-wrapper .menu .place-type button, #place-details ul #url {
   border: 1px solid #fff;
   padding: 4px 12px;
   color: #fff;
   font-family: "Kaushan Script", cursive;
   background-color: transparent; }
 
-header .intro-wrapper #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul #url:hover, footer a:hover {
+header #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul #url:hover, footer a:hover {
   border: 1px solid #000;
   cursor: pointer;
   -moz-transition: all 0.20s ease-in-out;
@@ -37,18 +37,23 @@ header {
   font-size: 45px; }
 
 /*----------------Intoduction Section---------------*/
-header section:first-child {
-  height: 25vh; }
-header section:nth-child(2) {
-  min-height: 75vh; }
-header .intro-wrapper {
-  margin-bottom: 40px; }
-  header .intro-wrapper h3 {
-    font-family: "Kaushan Script", cursive;
-    font-size: 22px; }
-  header .intro-wrapper p {
+header {
+  /*section:first-child {
+      height: 25vh;
+  }
+  section:nth-child(2) {
+      min-height: 75vh;
+  }*/ }
+  header .intro-wrapper {
     margin-bottom: 40px; }
-  header .intro-wrapper #scrollToMap {
+    header .intro-wrapper h3 {
+      font-family: "Kaushan Script", cursive; }
+    header .intro-wrapper p {
+      margin-bottom: 40px; }
+  header img {
+    width: 100%;
+    border: 1px solid #000; }
+  header #scrollToMap {
     border: 1px solid #fff; }
 
 /*--------------Main--------------------*/
@@ -106,11 +111,11 @@ input[type=search]::-webkit-search-cancel-button {
     height: 28px;
     padding-left: 5px;
     margin: 15px 0px 25px 0px;
-    font-size: 16px;
     color: #fff;
-    font-weight: 300;
     background-color: transparent;
-    border: 1px solid #fff; }
+    border: 1px solid #fff;
+    font-size: 16px;
+    font-weight: 300; }
 
 .menu-heading {
   margin-top: 10px;

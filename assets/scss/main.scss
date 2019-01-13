@@ -36,29 +36,34 @@ header {
 /*----------------Intoduction Section---------------*/
 
 header {
-    section:first-child {
+    /*section:first-child {
         height: 25vh;
     }
     section:nth-child(2) {
         min-height: 75vh;
-    }
+    }*/
     .intro-wrapper {
         margin-bottom: 40px;
         h3 {
             font: {
-                family: $primary-font;
-                size: 22px;
+                family: $primary-font; //size: 22px;
             }
         }
         p {
             margin-bottom: 40px;
         }
-        #scrollToMap {
-            @extend %btn;
-            @include border($primary-color);
-        }
+    }
+    img {
+        width: 100%;
+        @include border(#000)
+    }
+    #scrollToMap {
+        @extend %btn;
+        @include border($primary-color);
     }
 }
+
+
 
 /*--------------Main--------------------*/
 
@@ -120,11 +125,13 @@ input[type=search]::-webkit-search-cancel-button {
         height: 28px;
         padding-left: 5px;
         margin: 15px 0px 25px 0px;
-        font-size: 16px;
         color: $primary-color;
-        font-weight: 300;
         background-color: transparent;
         @include border($primary-color);
+        font: {
+            size: 16px;
+            weight: 300;
+        }
     }
 }
 
@@ -192,11 +199,11 @@ input[type=search]::-webkit-search-cancel-button {
     margin-right: 15px;
     ul {
         list-style-type: none;
-        color: $secondary-color;
+        color: #000;
         font-weight: 500;
         #place-name {
             border-bottom: 1px solid #000;
-            color: $secondary-color;
+            color: #000;
             font: {
                 family: $primary-font;
                 size: 21px;

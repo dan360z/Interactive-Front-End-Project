@@ -39,8 +39,10 @@ function initMap() {
     //Nearby establishment search by click---------------------------
     service = new google.maps.places.PlacesService(map);
     google.maps.event.addListener(map, 'click', function(event) {
-
-        if ($('button').hasClass('selected')) {
+        
+        //This checks to see if a place type has been selected----------------
+        
+        if ($('button').hasClass('selected')) { 
             $('.search-container').slideUp(); //Hides search box when user clicks to search----------
             map.panTo(event.latLng);
             map.setZoom(15);
@@ -48,9 +50,10 @@ function initMap() {
             filterResults(); //Runs filterResults------------ 
         }
         else {
-            //Shows a pop up that instructs user to select a place type-----------------------
+            /*If a place type has not been selected then
+            this shows a pop up that instructs user to select a place type*/
             $('#selectType').show();
-            $('#places-btn').addClass('glow'); //Makes places button glow if the users hasn't selected a place type
+            $('#places-btn').addClass('glow'); //Makes places button glow to show where the place type menu is
             setTimeout(function() {
                 $('#selectType').hide();
                 $('#places-btn').removeClass('glow');
@@ -58,7 +61,7 @@ function initMap() {
         }
     });
 
-    //Info window with place details------------------------------
+    //Sets the info window in the place details html element------------------------------
     infoWindow = new google.maps.InfoWindow({
         content: document.getElementById('place-details')
     });
@@ -66,7 +69,10 @@ function initMap() {
 
 //Filter results----------------------------------------------
 function filterResults() {
-
+    
+    /*This checks which place type is selected
+    before running the search places function*/
+    
     if ($('#accomodation').hasClass('selected')) {
         placeType = ['lodging'];
     }

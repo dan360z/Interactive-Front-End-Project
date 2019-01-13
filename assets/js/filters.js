@@ -1,10 +1,20 @@
 $(document).ready(function() {
-   
+
    //When a user clicks the 'lets's go' button the page will smoothly scroll to the map-------
 
    $('#scrollToMap').click(function() {
       $("html, body").animate({ scrollTop: $(document).height() }, 1000);
    });
+
+   /*This swaps out the instructive popup and user guide image header to click or tap
+   depending on the screen width, for mobile devices it would say tap and for desktop
+   it would say click*/
+   if ($(window).width() > 992) {
+      $('#clickTap, #clickOrTap').text('Click');
+   }
+   else {
+      $('#clickTap, #clickOrTap').text('Tap');
+   }
 
    //Hides dropdown menus and popups when the page loads---------------------------------
 

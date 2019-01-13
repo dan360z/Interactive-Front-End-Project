@@ -39,11 +39,23 @@ function initMap() {
     //Nearby establishment search by click---------------------------
     service = new google.maps.places.PlacesService(map);
     google.maps.event.addListener(map, 'click', function(event) {
-        $('.search-container').slideUp(); //Hides search box when user clicks to search----------
-        map.panTo(event.latLng);
-        map.setZoom(15);
-        clearMarkers(); //Clears markers when the user clicks------------
-        filterResults(); //Runs filterResults------------
+
+        if ($('button').hasClass('selected')) {
+            $('.search-container').slideUp(); //Hides search box when user clicks to search----------
+            map.panTo(event.latLng);
+            map.setZoom(15);
+            clearMarkers(); //Clears markers when the user clicks------------
+            filterResults(); //Runs filterResults------------ 
+        }
+        else {
+            //Shows a pop up that instructs user to select a place type-----------------------
+            $('#selectType').show();
+            $('#places-btn').addClass('glow'); //Makes places button glow if the users hasn't selected a place type
+            setTimeout(function() {
+                $('#selectType').hide();
+                $('#places-btn').removeClass('glow');
+            }, 2500);
+        }
     });
 
     //Info window with place details------------------------------
@@ -54,74 +66,63 @@ function initMap() {
 
 //Filter results----------------------------------------------
 function filterResults() {
-    if ($('button').hasClass('selected')) {
 
-        if ($('#accomodation').hasClass('selected')) {
-            placeType = ['lodging'];
-        }
-        else if ($('#atm').hasClass('selected')) {
-            placeType = ['atm'];
-        }
-        else if ($('#store').hasClass('selected')) {
-            placeType = ['store'];
-        }
-        else if ($('#bar').hasClass('selected')) {
-            placeType = ['bar'];
-        }
-        else if ($('#restaurant').hasClass('selected')) {
-            placeType = ['restaurant'];
-        }
-        else if ($('#night-club').hasClass('selected')) {
-            placeType = ['night_club'];
-        }
-        else if ($('#casino').hasClass('selected')) {
-            placeType = ['casino'];
-        }
-        else if ($('#bowling').hasClass('selected')) {
-            placeType = ['bowling_alley'];
-        }
-        else if ($('#shopping').hasClass('selected')) {
-            placeType = ['shopping_mall'];
-        }
-        else if ($('#park').hasClass('selected')) {
-            placeType = ['park'];
-        }
-        else if ($('#amusement-park').hasClass('selected')) {
-            placeType = ['amusement_park'];
-        }
-        else if ($('#museum').hasClass('selected')) {
-            placeType = ['museum'];
-        }
-        else if ($('#aquarium').hasClass('selected')) {
-            placeType = ['aquarium'];
-        }
-        else if ($('#zoo').hasClass('selected')) {
-            placeType = ['zoo'];
-        }
-        else if ($('#train-station').hasClass('selected')) {
-            placeType = ['train_station'];
-        }
-        else if ($('#taxi-stand').hasClass('selected')) {
-            placeType = ['taxi_stand'];
-        }
-        else if ($('#transit-station').hasClass('selected')) {
-            placeType = ['transit_station'];
-        }
-        else if ($('#subway-station').hasClass('selected')) {
-            placeType = ['subway_station'];
-        }
-        //Runs searchPlaces------------------------------------------
-        searchPlaces();
+    if ($('#accomodation').hasClass('selected')) {
+        placeType = ['lodging'];
     }
-    else {
-        //Shows a pop up that instructs user to select a place type-----------------------
-        $('#selectType').show();
-        $('#places-btn').addClass('glow'); //Makes places button glow if the users hasn't selected a place type
-        setTimeout(function() {
-            $('#selectType').hide();
-            $('#places-btn').removeClass('glow');
-        }, 2500);
+    else if ($('#atm').hasClass('selected')) {
+        placeType = ['atm'];
     }
+    else if ($('#store').hasClass('selected')) {
+        placeType = ['store'];
+    }
+    else if ($('#bar').hasClass('selected')) {
+        placeType = ['bar'];
+    }
+    else if ($('#restaurant').hasClass('selected')) {
+        placeType = ['restaurant'];
+    }
+    else if ($('#night-club').hasClass('selected')) {
+        placeType = ['night_club'];
+    }
+    else if ($('#casino').hasClass('selected')) {
+        placeType = ['casino'];
+    }
+    else if ($('#bowling').hasClass('selected')) {
+        placeType = ['bowling_alley'];
+    }
+    else if ($('#shopping').hasClass('selected')) {
+        placeType = ['shopping_mall'];
+    }
+    else if ($('#park').hasClass('selected')) {
+        placeType = ['park'];
+    }
+    else if ($('#amusement-park').hasClass('selected')) {
+        placeType = ['amusement_park'];
+    }
+    else if ($('#museum').hasClass('selected')) {
+        placeType = ['museum'];
+    }
+    else if ($('#aquarium').hasClass('selected')) {
+        placeType = ['aquarium'];
+    }
+    else if ($('#zoo').hasClass('selected')) {
+        placeType = ['zoo'];
+    }
+    else if ($('#train-station').hasClass('selected')) {
+        placeType = ['train_station'];
+    }
+    else if ($('#taxi-stand').hasClass('selected')) {
+        placeType = ['taxi_stand'];
+    }
+    else if ($('#transit-station').hasClass('selected')) {
+        placeType = ['transit_station'];
+    }
+    else if ($('#subway-station').hasClass('selected')) {
+        placeType = ['subway_station'];
+    }
+    //Runs searchPlaces------------------------------------------
+    searchPlaces();
 }
 
 //Search places---------------------------------------------------------
@@ -197,7 +198,7 @@ function showInfoWindow() {
 //Add place details to info window------------------------------------------------- 
 function setPlaceDetails(place) {
     document.getElementById('place-name').textContent = place.name;
-    document.getElementById('address').textContent = 'Address: '  + place.formatted_address;
+    document.getElementById('address').textContent = 'Address: ' + place.formatted_address;
     document.getElementById('phoneNum').textContent = 'Contact Number: ' + place.formatted_phone_number;
     document.getElementById('url').innerHTML = '<a href="' + place.website + '" target="_blank">' + 'Website ' + '<i class="fas fa-globe-americas"></i>' + '</a>';
 }

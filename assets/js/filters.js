@@ -8,7 +8,6 @@ $(document).ready(function() {
 
    //Hides dropdown menus and popups when the page loads---------------------------------
 
-   $('.search-container').hide();
    $('.menu').hide();
    $('#selectType').hide();
    $('#tapMap').hide();

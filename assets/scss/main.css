@@ -80,6 +80,9 @@ header .intro-wrapper {
       border: 1px solid #000; }
 
 /*----------------Map and components---------------*/
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button; }
+
 .search-container {
   position: absolute;
   z-index: 2;
@@ -147,7 +150,7 @@ header .intro-wrapper {
     #place-details ul #place-name {
       font-family: "Kaushan Script", cursive;
       font-size: 18px;
-      color: #000; }
+      color: #fff; }
 
 /*----------------Footer-------------------------------------*/
 footer {
@@ -189,7 +192,7 @@ footer {
 
   footer {
     height: 8vh; } }
-/*----------------Media Queries for slightly bigger than usual mobie devices when rotated horizontally---------------*/
+/*----------------Media Queries for slightly bigger mobie devices when rotated horizontally---------------*/
 @media (max-height: 450px) and (min-width: 576px) {
   .map-header {
     height: 14vh; }

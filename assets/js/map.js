@@ -116,8 +116,10 @@ function filterResults() {
     else {
         //Shows a pop up that instructs user to select a place type-----------------------
         $('#selectType').show();
+        $('#places-btn').addClass('glow'); //Makes places button glow if the users hasn't selected a place type
         setTimeout(function() {
             $('#selectType').hide();
+            $('#places-btn').removeClass('glow');
         }, 2500);
     }
 }

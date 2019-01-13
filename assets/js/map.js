@@ -197,6 +197,9 @@ function showInfoWindow() {
 //Add place details to info window------------------------------------------------- 
 function setPlaceDetails(place) {
     document.getElementById('place-name').textContent = place.name;
+    document.getElementById('address').textContent = 'Address: '  + place.formatted_address;
+    document.getElementById('phoneNum').textContent = 'Contact Number: ' + place.formatted_phone_number;
+    document.getElementById('url').innerHTML = '<a href="' + place.website + '" target="_blank">' + 'Website ' + '<i class="fas fa-globe-americas"></i>' + '</a>';
 }
 
 //Shows a pop up window instructing the  user to click or tap on the map when they have selected a place type----------------

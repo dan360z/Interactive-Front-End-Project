@@ -1,14 +1,14 @@
-header .intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
+header .intro-wrapper #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul #url:hover, footer a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
   background-color: rgba(0, 0, 0, 0.3); }
 
-header .intro-wrapper a, .map-header .map-btns, .map-wrapper .menu .place-type button {
+header .intro-wrapper #scrollToMap, .map-header .map-btns, .map-wrapper .menu .place-type button, #place-details ul #url {
   border: 1px solid #fff;
   padding: 4px 12px;
   color: #fff;
-  background-color: transparent;
-  font-family: "Kaushan Script", cursive; }
+  font-family: "Kaushan Script", cursive;
+  background-color: transparent; }
 
-header .intro-wrapper a:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, footer a:hover {
+header .intro-wrapper #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul #url:hover, footer a:hover {
   border: 1px solid #000;
   cursor: pointer;
   -moz-transition: all 0.20s ease-in-out;
@@ -20,8 +20,6 @@ body {
   color: #fff;
   font-size: 1.10em;
   font-family: "Roboto", sans-serif; }
-  body button:focus {
-    outline: none; }
 
 /*----------------Header---------------*/
 header {
@@ -50,9 +48,8 @@ header .intro-wrapper {
     font-size: 22px; }
   header .intro-wrapper p {
     margin-bottom: 40px; }
-  header .intro-wrapper a {
-    border: 1px solid #fff;
-    text-decoration: none; }
+  header .intro-wrapper #scrollToMap {
+    border: 1px solid #fff; }
 
 /*--------------Main--------------------*/
 /*--------------Search and filters---------------*/
@@ -69,18 +66,29 @@ header .intro-wrapper {
     width: 150px;
     color: #000; }
   .map-header .map-btns {
-    font-size: 16px;
+    font-size: 16px; }
+  .map-header #search-btn {
     border: 1px solid #0ED2F7;
     background-image: linear-gradient(to right, #00c6ff, #0072ff); }
+    .map-header #search-btn:hover {
+      border: 1px solid #000;
+      box-shadow: 0px 0px 10px 3px #0ED2F7;
+      -moz-transition: all 0.20s ease-in-out;
+      -webkit-transition: all 0.20s ease-in-out;
+      -o-transition: all 0.20s ease-in-out; }
   .map-header #places-btn {
     margin-left: 10px;
     border: 1px solid #fb6000;
     background-image: linear-gradient(to right, #fe8c00, #f83600); }
     .map-header #places-btn:hover {
-      border: 1px solid #000; }
+      border: 1px solid #000;
+      box-shadow: 0px 0px 10px 3px #fb6000;
+      -moz-transition: all 0.20s ease-in-out;
+      -webkit-transition: all 0.20s ease-in-out;
+      -o-transition: all 0.20s ease-in-out; }
 
 .glow {
-  box-shadow: 0px 0px 10px 5px #fb6000;
+  box-shadow: 0px 0px 10px 3px #fb6000;
   -moz-transition: all 0.20s ease-in-out;
   -webkit-transition: all 0.20s ease-in-out;
   -o-transition: all 0.20s ease-in-out; }
@@ -103,8 +111,6 @@ input[type=search]::-webkit-search-cancel-button {
     font-weight: 300;
     background-color: transparent;
     border: 1px solid #fff; }
-    .search-container .search:focus {
-      outline: none; }
 
 .menu-heading {
   margin-top: 10px;
@@ -152,11 +158,29 @@ input[type=search]::-webkit-search-cancel-button {
 #place-details {
   margin-right: 15px; }
   #place-details ul {
-    list-style-type: none; }
+    list-style-type: none;
+    color: #000;
+    font-weight: 500; }
     #place-details ul #place-name {
+      border-bottom: 1px solid #000;
+      color: #000;
       font-family: "Kaushan Script", cursive;
-      font-size: 18px;
-      color: #fff; }
+      font-size: 21px; }
+    #place-details ul p {
+      font-weight: 400; }
+    #place-details ul #url {
+      border: 1px solid #7303c0;
+      background-image: linear-gradient(to right, #7303c0, #ec38bc); }
+      #place-details ul #url:hover {
+        box-shadow: 0px 0px 10px 3px #7303c0;
+        -moz-transition: all 0.20s ease-in-out;
+        -webkit-transition: all 0.20s ease-in-out;
+        -o-transition: all 0.20s ease-in-out; }
+      #place-details ul #url a {
+        font-size: 15px;
+        color: #fff; }
+        #place-details ul #url a:hover {
+          text-decoration: none; }
 
 /*----------------Footer-------------------------------------*/
 footer {
@@ -181,13 +205,13 @@ footer {
 /*----------------Media Queries for large screens---------------*/
 @media (min-width: 576px) {
   .map-header {
-    height: 5vh; }
+    height: 7vh; }
 
   .map-wrapper #map {
-    height: 92vh; }
+    height: 89vh; }
 
   footer {
-    height: 3vh; } }
+    height: 4vh; } }
 /*----------------Media Queries for small mobile devices when rotated horizontally---------------*/
 @media (max-height: 450px) and (max-width: 576px) {
   .map-header {

@@ -35,7 +35,7 @@
                 <h3>Welcome!</h3>
                 <p>Let's Explore lets you search your next destination or your current location and shows you what establishments are around. Simply search a location, select an establishment type and tap or click anywhere on the map to display all the establishments
                     of that type in the area.</p>
-                <a id="scrollToMap">Lets go</a>
+                <button id="scrollToMap">Lets go</button>
             </div>
         </section>
         <!--/Welcome paragraph about-->
@@ -136,9 +136,18 @@
 
             <!--Info window-->
             <div style="display: none;">
-                <div id="place-details">
+                <div class="text-center" id="place-details">
                     <ul>
                         <li id="place-name"></li>
+                    </ul>
+                    <ul>
+                        <li>Address:<p id="address"></p></li>
+                    </ul>
+                    <ul>
+                        <li>Contact Number:<p id="phoneNum"></p></li>
+                    </ul>
+                    <ul>
+                        <li><button id="url"></button></li>
                     </ul>
                 </div>
             </div>

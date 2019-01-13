@@ -8,9 +8,6 @@ body {
     color: $primary-color;
     font-size: 1.10em;
     font-family: $secondary-font;
-    button:focus {
-        outline: none;
-    }
 }
 
 .over-lay {
@@ -56,10 +53,9 @@ header {
         p {
             margin-bottom: 40px;
         }
-        a {
+        #scrollToMap {
             @extend %btn;
             @include border($primary-color);
-            text-decoration: none;
         }
     }
 }
@@ -84,36 +80,41 @@ header {
     .map-btns {
         font-size: 16px;
         @extend %btn;
+    }
+    #search-btn {
         @include border(#0ED2F7);
-        @include gradient($lightBlueDarkBlue);
+        @include gradient($search-color);
+        &:hover {
+            @include border($secondary-color);
+            @include glow(#0ED2F7);
+        }
     }
     #places-btn {
         margin-left: 10px;
         @include border(#fb6000);
-        @include gradient($lightOragneDarkOrange);
+        @include gradient($places-color);
         &:hover {
             @include border($secondary-color);
+            @include glow(#fb6000);
         }
     }
 }
 
 .glow {
-    box-shadow: 0px 0px 10px 5px #fb6000; //Adds a glow effect to a button
-    -moz-transition: all 0.20s ease-in-out;
-    -webkit-transition: all 0.20s ease-in-out;
-    -o-transition: all 0.20s ease-in-out;
+    @include glow(#fb6000); //Adds a glow effect to a button
 }
 
 /*----------------Map and components---------------*/
 
-input[type=search]::-webkit-search-cancel-button { //This will override bootstrap so clear button appears in search
+input[type=search]::-webkit-search-cancel-button {
+    //This will override bootstrap so clear button appears in search
     -webkit-appearance: searchfield-cancel-button;
 }
 
 .search-container {
     position: absolute;
     z-index: 2;
-    @include gradient($lightBlueDarkBlue);
+    @include gradient($search-color);
     .search {
         width: 85%;
         height: 28px;
@@ -124,10 +125,6 @@ input[type=search]::-webkit-search-cancel-button { //This will override bootstra
         font-weight: 300;
         background-color: transparent;
         @include border($primary-color);
-
-        &:focus {
-            outline: none;
-        }
     }
 }
 
@@ -149,7 +146,7 @@ input[type=search]::-webkit-search-cancel-button { //This will override bootstra
         z-index: 3;
         max-height: 100%;
         padding-bottom: 20px; //height: 100%;
-        @include gradient($lightOragneDarkOrange);
+        @include gradient($places-color);
         overflow: auto;
         .place-type {
             padding: 0;
@@ -195,12 +192,33 @@ input[type=search]::-webkit-search-cancel-button { //This will override bootstra
     margin-right: 15px;
     ul {
         list-style-type: none;
+        color: $secondary-color;
+        font-weight: 500;
         #place-name {
+            border-bottom: 1px solid #000;
+            color: $secondary-color;
             font: {
                 family: $primary-font;
-                size: 18px;
+                size: 21px;
             }
-            color: $primary-color;
+        }
+        p {
+            font-weight: 400;
+        }
+        #url {
+            @extend %btn;
+            @include border(#7303c0);
+            @include gradient($info-color);
+            &:hover {
+                @include glow(#7303c0);
+            }
+            a {
+                font-size: 15px;
+                color: $primary-color;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
@@ -238,15 +256,15 @@ footer {
 @media (min-width: 576px) {
 
     .map-header {
-        height: 5vh;
+        height: 7vh;
     }
     .map-wrapper {
         #map {
-            height: 92vh;
+            height: 89vh;
         }
     }
     footer {
-        height: 3vh;
+        height: 4vh;
     }
 }
 

@@ -9,7 +9,7 @@
     @include border($primary-color);  
     padding: 4px 12px;
     color: $primary-color;
-    font-family: $primary-font;
+    font-family: $logo-font;
     background-color: transparent;
     &:hover {
         @extend %mouseOver;

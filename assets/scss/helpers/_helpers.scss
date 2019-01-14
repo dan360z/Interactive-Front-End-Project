@@ -1,14 +1,13 @@
-
-//-----Background image, selected buttons and buttons hover overlay
+//-----Background image, buttons selected and hover overlay
 %overlay {                        
     background-color: $overlay-opacity;  
 }
 
 //-----Base styles for the buttons
 %btn {   
-    @include border($primary-color);  
+    @include border($brand-color);  
     padding: 4px 12px;
-    color: $primary-color;
+    color: $brand-color;
     font-family: $logo-font;
     background-color: transparent;
     &:hover {
@@ -19,7 +18,7 @@
 //-----Styles for the buttons and hover states
 %mouseOver {
     @extend %overlay;
-    @include border($secondary-color);
+    @include border(#000);
     cursor: pointer;
     -moz-transition: all 0.20s ease-in-out;
     -webkit-transition: all 0.20s ease-in-out;

@@ -77,8 +77,8 @@ header #scrollToMap {
   .map-header .map-btns {
     font-size: 16px; }
   .map-header #search-btn {
-    border: 1px solid #0ED2F7;
-    background-image: linear-gradient(to right, #00c6ff, #0072ff); }
+    background-image: linear-gradient(to right, #00c6ff, #0072ff);
+    border: 1px solid #0ED2F7; }
     .map-header #search-btn:hover {
       border: 1px solid #000;
       box-shadow: 0px 0px 10px 3px #0ED2F7;
@@ -87,8 +87,8 @@ header #scrollToMap {
       -o-transition: all 0.20s ease-in-out; }
   .map-header #places-btn {
     margin-left: 10px;
-    border: 1px solid #fb6000;
-    background-image: linear-gradient(to right, #fe8c00, #f83600); }
+    background-image: linear-gradient(to right, #fe8c00, #f83600);
+    border: 1px solid #fb6000; }
     .map-header #places-btn:hover {
       border: 1px solid #000;
       box-shadow: 0px 0px 10px 3px #fb6000;
@@ -180,8 +180,8 @@ input[type=search]::-webkit-search-cancel-button {
     #place-details ul p {
       font-weight: 400; }
     #place-details ul #url {
-      border: 1px solid #7303c0;
-      background-image: linear-gradient(to right, #7303c0, #ec38bc); }
+      background-image: linear-gradient(to right, #7303c0, #ec38bc);
+      border: 1px solid #7303c0; }
       #place-details ul #url:hover {
         box-shadow: 0px 0px 10px 3px #7303c0;
         -moz-transition: all 0.20s ease-in-out;
@@ -215,6 +215,7 @@ footer {
 
 /*----------------Media Queries for medium and large screens---------------*/
 @media (min-width: 576px) {
+  /*-----This adjusts the Intro and guide images to fit nicley in the viewport----------*/
   header .logo {
     margin: 80px 0px 40px 0px; }
   header .intro-wrapper {
@@ -225,6 +226,7 @@ footer {
   .guide-images-wrapper img {
     margin-bottom: 30px; }
 
+  /*-----This makes then map interface fit 100% of the viewport----------------*/
   .map-header {
     height: 7vh; }
 

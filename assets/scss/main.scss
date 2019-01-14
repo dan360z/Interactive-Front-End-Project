@@ -5,7 +5,7 @@
 /*----------------Background and Overlay---------------*/
 
 body {
-    color: $primary-color;
+    color: $brand-color;
     font-size: 1.10em;
     font-family: $primary-font;
 }
@@ -27,7 +27,7 @@ header {
 
 header {
     .logo {
-        @include border($primary-color);
+        @include border($brand-color);
         margin: 30px 0px;
         padding: 5px 15px;
         display: inline-block;
@@ -42,7 +42,7 @@ header {
             font-family: $logo-font;
         }
         hr {
-            background-color: $primary-color;
+            background-color: $brand-color;
         }
         p {
             margin-bottom: 40px;
@@ -50,18 +50,16 @@ header {
     }
     #scrollToMap {
         @extend %btn;
-        @include border($primary-color);
+        @include border($brand-color);
     }
 }
-
-
 
 /*--------------Main--------------------*/
 
 /*-------User guide images------------------*/
 
 .guide-images-wrapper {
-    background-color: #eef2f3;
+    background-color: $base-color;
     h5 {
         font-family: $logo-font;
         color: #000;
@@ -78,35 +76,33 @@ header {
 
 .map-header {
     height: 15vh;
-    background-color: #eef2f3;
+    background-color: $base-color;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     .logo2 {
         font-family: $logo-font;
-        @include border(#000);
+        @include border($dark-brand-color);
         margin: 0;
         padding: 2px;
         width: 150px;
-        color: #000;
+        color: $dark-brand-color;
     }
     .map-btns {
         font-size: 16px;
         @extend %btn;
     }
     #search-btn {
-        @include border(#0ED2F7);
-        @include gradient($search-color);
+        @include buttonColors($search-color, #0ED2F7);
         &:hover {
-            @include border($secondary-color);
+            @include border(#000);
             @include glow(#0ED2F7);
         }
     }
     #places-btn {
         margin-left: 10px;
-        @include border(#fb6000);
-        @include gradient($places-color);
+        @include buttonColors($places-color, #fb6000);
         &:hover {
-            @include border($secondary-color);
+            @include border(#000);
             @include glow(#fb6000);
         }
     }
@@ -133,9 +129,9 @@ input[type=search]::-webkit-search-cancel-button {
         height: 28px;
         padding-left: 5px;
         margin: 15px 0px 25px 0px;
-        color: $primary-color;
+        color: $brand-color;
         background-color: transparent;
-        @include border($primary-color);
+        @include border($brand-color);
         font: {
             size: 16px;
             weight: 300;
@@ -176,7 +172,7 @@ input[type=search]::-webkit-search-cancel-button {
                 word-wrap: break-word;
             }
             .selected {
-                border-color: $primary-color;
+                border-color: $brand-color;
                 @extend %overlay;
             }
         }
@@ -222,14 +218,13 @@ input[type=search]::-webkit-search-cancel-button {
         }
         #url {
             @extend %btn;
-            @include border(#7303c0);
-            @include gradient($info-color);
+            @include buttonColors($info-color, #7303c0);
             &:hover {
                 @include glow(#7303c0);
             }
             a {
                 font-size: 15px;
-                color: $primary-color;
+                color: $brand-color;
                 &:hover {
                     text-decoration: none;
                 }
@@ -242,10 +237,10 @@ input[type=search]::-webkit-search-cancel-button {
 
 footer {
     height: 5vh;
-    background-color: #eef2f3;
+    background-color: $base-color;
     border-top: 1px solid #000;
     overflow: auto;
-    color: $secondary-color;
+    color: $dark-brand-color;
     font: {
         family: $logo-font;
         weight: 300;
@@ -256,10 +251,10 @@ footer {
     }
     a {
         margin-left: 5px;
-        color: $secondary-color;
+        color: $dark-brand-color;
         &:hover {
             @extend %mouseOver;
-            color: $primary-color;
+            color: $brand-color;
             background-color: transparent;
             border: none;
         }
@@ -269,7 +264,7 @@ footer {
 /*----------------Media Queries for medium and large screens---------------*/
 
 @media (min-width: 576px) {
-    //-----This adjusts the Intro and guide images to fit nicley in the viewport----------
+    /*-----This adjusts the Intro and guide images to fit nicley in the viewport----------*/
     header {
         .logo {
             margin: 80px 0px 40px 0px;
@@ -286,7 +281,8 @@ footer {
         img {
             margin-bottom: 30px;
         }
-    } //-----This makes then map interface fit 100% of the viewport-----------------
+    }
+    /*-----This makes then map interface fit 100% of the viewport----------------*/
     .map-header {
         height: 7vh;
     }
@@ -304,7 +300,6 @@ footer {
 
 @media (max-height: 450px) and (max-width: 576px) {
 
-
     header {
         .logo {
             margin: 10px 0px;
@@ -316,7 +311,6 @@ footer {
             }
         }
     }
-
     .map-header {
         height: 25vh;
     }
@@ -334,8 +328,6 @@ footer {
 /*----------------Media Queries for slightly bigger mobie devices when rotated horizontally---------------*/
 
 @media (max-height: 450px) and (min-width: 576px) {
-
-
 
     header {
         .logo {

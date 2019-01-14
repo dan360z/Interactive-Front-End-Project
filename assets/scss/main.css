@@ -1,14 +1,14 @@
-header #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul #url:hover, footer a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
+.intro-wrapper #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul #url:hover, footer a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
   background-color: rgba(0, 0, 0, 0.3); }
 
-header #scrollToMap, .map-header .map-btns, .map-wrapper .menu .place-type button, #place-details ul #url {
+.intro-wrapper #scrollToMap, .map-header .map-btns, .map-wrapper .menu .place-type button, #place-details ul #url {
   border: 1px solid #fff;
   padding: 4px 12px;
   color: #fff;
   font-family: "Kaushan Script", cursive;
   background-color: transparent; }
 
-header #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul #url:hover, footer a:hover {
+.intro-wrapper #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul #url:hover, footer a:hover {
   border: 1px solid #000;
   cursor: pointer;
   -moz-transition: all 0.20s ease-in-out;
@@ -21,40 +21,44 @@ body {
   font-size: 1.10em;
   font-family: "Roboto", sans-serif; }
 
-/*----------------Header---------------*/
-header {
+.sm-screen-background {
   background: url(https://www.hiusa.org/images/uploads/explore-the-world-image.jpg) no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
+/*----------------Header---------------*/
 .logo {
   border: 1px solid #fff;
+  margin: 50px 0px;
   padding: 5px 15px;
   display: inline-block;
   font-family: "Kaushan Script", cursive;
   font-size: 45px; }
 
 /*----------------Intoduction Section---------------*/
-header {
-  /*section:first-child {
-      height: 25vh;
-  }
-  section:nth-child(2) {
-      min-height: 75vh;
-  }*/ }
-  header .intro-wrapper {
+.intro-wrapper {
+  padding: 0px 30px 40px 30px; }
+  .intro-wrapper h3 {
+    font-family: "Kaushan Script", cursive;
+    border-bottom: 1px solid #fff; }
+  .intro-wrapper p {
     margin-bottom: 40px; }
-    header .intro-wrapper h3 {
-      font-family: "Kaushan Script", cursive; }
-    header .intro-wrapper p {
-      margin-bottom: 40px; }
-  header img {
-    width: 100%;
-    border: 1px solid #000; }
-  header #scrollToMap {
+  .intro-wrapper #scrollToMap {
     border: 1px solid #fff; }
+
+/*-------User Guide Images Section-----------------*/
+.image-wrapper {
+  background-color: #eef2f3; }
+  .image-wrapper h5 {
+    color: #000;
+    font-family: "Kaushan Script", cursive;
+    margin-top: 10px; }
+  .image-wrapper img {
+    width: 100%;
+    border: 1px solid #000;
+    margin-bottom: 50px; }
 
 /*--------------Main--------------------*/
 /*--------------Search and filters---------------*/
@@ -207,7 +211,7 @@ footer {
       background-color: transparent;
       border: none; }
 
-/*----------------Media Queries for large screens---------------*/
+/*----------------Media Queries for medium and large screens---------------*/
 @media (min-width: 576px) {
   .map-header {
     height: 7vh; }
@@ -217,6 +221,21 @@ footer {
 
   footer {
     height: 4vh; } }
+/*----------------Media Queries for large screens---------------*/
+@media (min-width: 992px) {
+  header {
+    background: url(https://www.hiusa.org/images/uploads/explore-the-world-image.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    header .sm-screen-background {
+      background: none; }
+    header .image-wrapper {
+      background-color: rgba(0, 0, 0, 0.3); }
+
+  .image-wrapper h5 {
+    color: #fff; } }
 /*----------------Media Queries for small mobile devices when rotated horizontally---------------*/
 @media (max-height: 450px) and (max-width: 576px) {
   .map-header {

@@ -23,39 +23,30 @@ header {
     background-size: cover;
 }
 
-.logo {
-    @include border($primary-color);
-    padding: 5px 15px;
-    display: inline-block;
-    font: {
-        family: $logo-font;
-        size: 45px;
-    }
-}
-
 /*----------------Intoduction Section---------------*/
 
 header {
-    /*section:first-child {
-        height: 25vh;
+    .logo {
+        @include border($primary-color);
+        margin: 30px 0px;
+        padding: 5px 15px;
+        display: inline-block;
+        font: {
+            family: $logo-font;
+            size: 45px;
+        }
     }
-    section:nth-child(2) {
-        min-height: 75vh;
-    }*/
     .intro-wrapper {
         margin-bottom: 40px;
         h3 {
-            font: {
-                family: $logo-font; //size: 22px;
-            }
+            font-family: $logo-font;
+        }
+        hr {
+            background-color: $primary-color;
         }
         p {
             margin-bottom: 40px;
         }
-    }
-    img {
-        width: 100%;
-        @include border(#000)
     }
     #scrollToMap {
         @extend %btn;
@@ -66,6 +57,22 @@ header {
 
 
 /*--------------Main--------------------*/
+
+/*-------User guide images------------------*/
+
+.guide-images-wrapper {
+    background-color: #eef2f3;
+    h5 {
+        font-family: $logo-font;
+        color: #000;
+        margin-top: 15px;
+    }
+    img {
+        width: 100%;
+        @include border(#000);
+        margin-bottom: 10px;
+    }
+}
 
 /*--------------Search and filters---------------*/
 
@@ -112,8 +119,9 @@ header {
 /*----------------Map and components---------------*/
 
 input[type=search]::-webkit-search-cancel-button {
-    //This will override bootstrap so clear button appears in search
     -webkit-appearance: searchfield-cancel-button;
+    /*This overrides bootstrap's css so a clear 
+    button appears in the search bar*/
 }
 
 .search-container {
@@ -152,7 +160,7 @@ input[type=search]::-webkit-search-cancel-button {
         width: 100%;
         z-index: 3;
         max-height: 100%;
-        padding-bottom: 20px; //height: 100%;
+        padding-bottom: 20px;
         @include gradient($places-color);
         overflow: auto;
         .place-type {
@@ -261,7 +269,24 @@ footer {
 /*----------------Media Queries for medium and large screens---------------*/
 
 @media (min-width: 576px) {
+    //-----This adjusts the Intro and guide images to fit nicley in the viewport----------
+    header {
+        .logo {
+            margin: 80px 0px 40px 0px;
+        }
+        .intro-wrapper {
+            margin-bottom: 120px;
+            p {
+                margin-bottom: 70px;
+            }
+        }
+    }
 
+    .guide-images-wrapper {
+        img {
+            margin-bottom: 30px;
+        }
+    } //-----This makes then map interface fit 100% of the viewport-----------------
     .map-header {
         height: 7vh;
     }
@@ -278,6 +303,19 @@ footer {
 /*----------------Media Queries for small mobile devices when rotated horizontally---------------*/
 
 @media (max-height: 450px) and (max-width: 576px) {
+
+
+    header {
+        .logo {
+            margin: 10px 0px;
+        }
+        .intro-wrapper {
+            margin-bottom: 10px;
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
 
     .map-header {
         height: 25vh;
@@ -296,6 +334,20 @@ footer {
 /*----------------Media Queries for slightly bigger mobie devices when rotated horizontally---------------*/
 
 @media (max-height: 450px) and (min-width: 576px) {
+
+
+
+    header {
+        .logo {
+            margin: 10px 0px;
+        }
+        .intro-wrapper {
+            margin-bottom: 20px;
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
 
     .map-header {
         height: 14vh;

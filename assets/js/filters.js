@@ -12,9 +12,6 @@ $(document).ready(function() {
    if ($(window).width() > 992) {
       $('#clickTap, #clickOrTap').text('Click');
    }
-   else {
-      $('#clickTap, #clickOrTap').text('Tap');
-   }
 
    //Hides dropdown menus and popups when the page loads---------------------------------
 

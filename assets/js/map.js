@@ -150,7 +150,7 @@ function searchPlaces() {
                 markers[i].placeResult = results[i];
                 google.maps.event.addListener(markers[i], 'click', showInfoWindow); //Show info window when user clicks on a marker---
                 setTimeout(placeMarkers(i), i * 60);
-                /*This places the markers on the map one by one and was inspired by Kim Pearton’s 
+                /*This places the markers on the map one by one. This was inspired by Kim Pearton’s 
                 project Limitless for more information check the documentation credits section----------
                 */
             }

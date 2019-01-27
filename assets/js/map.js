@@ -39,10 +39,10 @@ function initMap() {
     //Nearby establishment search by click---------------------------
     service = new google.maps.places.PlacesService(map);
     google.maps.event.addListener(map, 'click', function(event) {
-        
+
         //This checks to see if a place type has been selected----------------
-        
-        if ($('button').hasClass('selected')) { 
+
+        if ($('button').hasClass('selected')) {
             $('.search-container').slideUp(); //Hides search box when user clicks to search----------
             map.panTo(event.latLng);
             map.setZoom(15);
@@ -69,10 +69,10 @@ function initMap() {
 
 //Filter results----------------------------------------------
 function filterResults() {
-    
+
     /*This checks which place type is selected
     before running the search places function*/
-    
+
     if ($('#accomodation').hasClass('selected')) {
         placeType = ['lodging'];
     }
@@ -147,10 +147,12 @@ function searchPlaces() {
                     position: results[i].geometry.location,
                     title: 'Information',
                 });
-                //Show info window when user clicks on a marker----------------------------
                 markers[i].placeResult = results[i];
-                google.maps.event.addListener(markers[i], 'click', showInfoWindow);
+                google.maps.event.addListener(markers[i], 'click', showInfoWindow); //Show info window when user clicks on a marker---
                 setTimeout(placeMarkers(i), i * 60);
+                /*This places the markers on the map one by one and was inspired by Kim Pearton’s 
+                project Limitless for more information check the documentation credits section----------
+                */
             }
         }
         //If there are results, this displays an info window showing the amount of results to the user--------

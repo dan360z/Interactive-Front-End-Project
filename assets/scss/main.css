@@ -150,7 +150,7 @@ input[type=search]::-webkit-search-cancel-button {
         font-size: 15px;
         word-wrap: break-word; }
       .map-wrapper .menu .place-type .selected {
-        border-color: #fff; }
+        border-color: #000; }
 
 /*----------------Tap Map Instruction Popup---------------*/
 .popup {

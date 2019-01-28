@@ -64,8 +64,8 @@ A message will also appear showing the user how many establishments the search r
 
 ### Features Left to Implement
 
-- Directions feature - This will allow users to get directions to an establishment they have clicked on. 
-This will appear as a button in the icon information window.
+- Directions feature - This will allow users to get directions to an establishment they have clicked on, 
+by clicking a "directions" button in the icon information window.
 - GPS button - This will allow users to center the map on their GPS location, with one click of a button.
 - Social media sharing - This will allow users to share their search results via social media.
 

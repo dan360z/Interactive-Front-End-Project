@@ -52,7 +52,7 @@ and the search box will smoothly slide up and disappear.
 - The "Places" menu - This is a section that is displayed over the map and gives the user the ability to select a specific establishment type to search.
 Once the user has selected an establishment type the places menu will smoothly slide up and disappear.
 
-- Click or tap to search feature - Allows users to search for their selected type of establishment, by either clicking or tapping anywhere on the map.
+- Click or tap to search feature - This allows users to search for their selected type of establishment, by either clicking or tapping anywhere on the map.
 
 - The icon information window - This is a small window that appears when a user clicks on one of the markers that the map displays. It gives the user the ability to find out
 more about the establishment, by displaying the establishment's name, address, contact number and an external link to their website.
@@ -64,8 +64,11 @@ A message will also appear showing the user how many establishments the search r
 
 ### Features Left to Implement
 
-- Social media sharing - This will allow users to share their search results via social media.
+- Directions feature - This will allow users to get directions to an establishment they have clicked on. 
+This will appear as a button in the icon information window.
 - GPS button - This will allow users to center the map on their GPS location, with one click of a button.
+- Social media sharing - This will allow users to share their search results via social media.
+
 
 ## Technologies Used
 

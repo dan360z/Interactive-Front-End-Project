@@ -5,7 +5,7 @@ This allows users to search their next destination or current location. Once a u
 the user will be able to select an establishment type from the "Places menu" e.g., Bars, Restaurants, Accomodation and more. Once the user has
 selected an establishment type they can either click or tap anywhere on the map (depending on which device they are using) and this will display
 all of the establishments of the specified type on the map with icons. Also the user can click on any of these icons and it will display the
-name, address, contact number and a link to the establishments website.
+name, address, contact number, a link to the establishments website and the establishments photos.
 
 ## UX
 
@@ -55,7 +55,7 @@ Once the user has selected an establishment type the places menu will smoothly s
 - Click or tap to search feature - This allows users to search for their selected type of establishment, by either clicking or tapping anywhere on the map.
 
 - The icon information window - This is a small window that appears when a user clicks on one of the markers that the map displays. It gives the user the ability to find out
-more about the establishment, by displaying the establishment's name, address, contact number and an external link to their website.
+more about the establishment, by displaying the establishment's name, address, contact number, an external link to their website and up to 4 photos of the establishment.
 
 - Map messages - These are messages that appear in the center of the map that insturct the user to select an establishment type if they try to search without selecting one.
 A message will also appear showing the user how many establishments the search returned, or that the search didn't return any establishments.

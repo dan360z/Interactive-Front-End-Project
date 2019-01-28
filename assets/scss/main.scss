@@ -219,6 +219,11 @@ input[type=search]::-webkit-search-cancel-button {
         p {
             font-weight: 400;
         }
+        .photos {
+            height: 20px;
+            margin: 0px 4px 15px 0px;
+            display: inline-block;
+        }
         .weblink {
             position: relative;
             @extend %btn;
@@ -234,7 +239,7 @@ input[type=search]::-webkit-search-cancel-button {
             top: -27px;
             left: 0;
             z-index: 2;
-            background-color: rgba(255,255,255, 0.7);
+            background-color: rgba(255, 255, 255, 0.7);
             font-size: 14px;
             padding: 9px 4px;
             display: inline-block;
@@ -292,6 +297,15 @@ footer {
             margin-bottom: 30px;
         }
     }
+    /*------This makes the images bigger in the icon's info window on bigger screens--*/
+    #place-details {
+        ul {
+            .photos {
+                height: 55px;
+            }
+        }
+    }
+
     /*-----This makes then map interface fit 100% of the viewport----------------*/
     .map-header {
         height: 7vh;

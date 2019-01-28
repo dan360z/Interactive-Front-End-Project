@@ -182,6 +182,10 @@ input[type=search]::-webkit-search-cancel-button {
       font-size: 21px; }
     #place-details ul p {
       font-weight: 400; }
+    #place-details ul .photos {
+      height: 20px;
+      margin: 0px 4px 15px 0px;
+      display: inline-block; }
     #place-details ul .weblink {
       position: relative;
       background-image: linear-gradient(to right, #7303c0, #ec38bc);
@@ -235,6 +239,10 @@ footer {
 
   .guide-images-wrapper img {
     margin-bottom: 30px; }
+
+  /*------This makes the images bigger in the icon's info window on bigger screens--*/
+  #place-details ul .photos {
+    height: 55px; }
 
   /*-----This makes then map interface fit 100% of the viewport----------------*/
   .map-header {

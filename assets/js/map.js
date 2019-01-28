@@ -207,7 +207,6 @@ function showInfoWindow() {
 function setPlaceDetails(place) {
 
     document.getElementById('place-name').textContent = place.name;
-    
     if (place.formatted_address) { //This checks if Google Places api returns the place's details---------
         document.getElementById('address').textContent = place.formatted_address;
     }
@@ -221,9 +220,15 @@ function setPlaceDetails(place) {
         document.getElementById('phoneNum').textContent = 'Not Available';
     }
 
+    //This returns up to 4 photos and adds them to the info window------------------------------
+    $('#photos').html('');
+    for (var i = 0; i < 4; i++) {
+        $('#photos').append('<img class="photos" src ="' + place.photos[i].getUrl() + '">');
+    }
+
     document.getElementById('url').innerHTML = '<a class="weblink" href="' + place.website + '" target="_blank">' + 'Website ' + '<i class="fas fa-globe-americas"></i>' + '</a>';
     $('.cover').hide();
-    
+
     if (!place.website) { //If the place does not have a website the link will be covered up with "Not Available"---------
         $('.cover').show();
     }

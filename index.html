@@ -164,21 +164,20 @@
             <!--Info window for markers-->
             <div style="display: none;">
                 <div class="text-center" id="place-details">
-                    <ul>
+                    <ul id="info-list">
                         <li id="place-name"></li>
-                    </ul>
-                    <ul>
+                    
                         <li>Address:
                             <p id="address"></p>
                         </li>
-                    </ul>
-                    <ul>
+                    
                         <li>Contact Number:
                             <p id="phoneNum"></p>
                         </li>
-                    </ul>
-                    <ul>
-                        <li><button id="url"></button></li>
+                
+                        <li id="url"></li>
+                        <!--This will cover the link to the establishment if no URL is returned-->
+                        <li class="cover">Not Available</li>
                     </ul>
                 </div>
             </div>

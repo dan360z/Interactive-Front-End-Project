@@ -1,14 +1,14 @@
-header #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul #url:hover, footer a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
+header #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul .weblink:hover, footer a:hover, .over-lay, .map-wrapper .menu .place-type .selected {
   background-color: rgba(0, 0, 0, 0.3); }
 
-header #scrollToMap, .map-header .map-btns, .map-wrapper .menu .place-type button, #place-details ul #url {
+header #scrollToMap, .map-header .map-btns, .map-wrapper .menu .place-type button, #place-details ul .weblink {
   border: 1px solid #fff;
   padding: 4px 12px;
   color: #fff;
   font-family: "Kaushan Script", cursive;
   background-color: transparent; }
 
-header #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul #url:hover, footer a:hover {
+header #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul .weblink:hover, footer a:hover {
   border: 1px solid #000;
   cursor: pointer;
   -moz-transition: all 0.20s ease-in-out;
@@ -176,23 +176,32 @@ input[type=search]::-webkit-search-cancel-button {
     #place-details ul #place-name {
       border-bottom: 1px solid #000;
       color: #000;
+      padding-bottom: 2px;
+      margin-bottom: 7px;
       font-family: "Kaushan Script", cursive;
       font-size: 21px; }
     #place-details ul p {
       font-weight: 400; }
-    #place-details ul #url {
+    #place-details ul .weblink {
+      position: relative;
       background-image: linear-gradient(to right, #7303c0, #ec38bc);
-      border: 1px solid #7303c0; }
-      #place-details ul #url:hover {
+      border: 1px solid #7303c0;
+      font-size: 15px; }
+      #place-details ul .weblink:hover {
         box-shadow: 0px 0px 10px 3px #7303c0;
         -moz-transition: all 0.20s ease-in-out;
         -webkit-transition: all 0.20s ease-in-out;
-        -o-transition: all 0.20s ease-in-out; }
-      #place-details ul #url a {
-        font-size: 15px;
-        color: #fff; }
-        #place-details ul #url a:hover {
-          text-decoration: none; }
+        -o-transition: all 0.20s ease-in-out;
+        text-decoration: none; }
+    #place-details ul .cover {
+      position: relative;
+      top: -27px;
+      left: 0;
+      z-index: 2;
+      background-color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      padding: 9px 4px;
+      display: inline-block; }
 
 /*----------------Footer-------------------------------------*/
 footer {

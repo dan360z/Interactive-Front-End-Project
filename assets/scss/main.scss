@@ -219,9 +219,14 @@ input[type=search]::-webkit-search-cancel-button {
         p {
             font-weight: 400;
         }
+        li:nth-child(2) {
+            p {
+                margin-bottom: 9px;
+            }
+        }
         .photos {
-            height: 55px; //20 too small!
-            margin: 0px 4px 15px 0px;
+            height: 50px; //20 too small!
+            margin: 0px 4px 8px 0px;
             display: inline-block;
         }
         .weblink {
@@ -298,14 +303,13 @@ footer {
         }
     }
     /*------This makes the images bigger in the icon's info window on bigger screens--*/
-    /*#place-details {
+    #place-details {
         ul {
             .photos {
-                height: 55px;
+                height: 60px;
             }
         }
-    }*/
-
+    }
     /*-----This makes then map interface fit 100% of the viewport----------------*/
     .map-header {
         height: 7vh;

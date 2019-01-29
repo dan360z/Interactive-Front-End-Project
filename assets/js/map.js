@@ -221,9 +221,10 @@ function setPlaceDetails(place) {
     }
 
     //This returns up to 4 photos and adds them to the info window------------------------------
-    $('#photos').html('');
+    $('#photos-wrapper').html('');
     for (var i = 0; i < 4; i++) {
-        $('#photos').append('<img class="photos" src ="' + place.photos[i].getUrl() + '">');
+        if($(window).width() <= 576 && i == 2){ break; }//This limits the result to only 2 photos on small devices
+        $('#photos-wrapper').append('<img alt="A photo of the establishment" class="photos" src ="' + place.photos[i].getUrl() + '">');
     }
 
     document.getElementById('url').innerHTML = '<a class="weblink" href="' + place.website + '" target="_blank">' + 'Website ' + '<i class="fas fa-globe-americas"></i>' + '</a>';

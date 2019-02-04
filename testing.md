@@ -30,7 +30,7 @@ User scenarios:
     - Google Chrome's developer tools to see how the website functioned and looked across all the different device screen sizes.
 
 #### Browser Support
-- I tested the website on Chrome, Microsoft Edge and Firefox. There were no issues.
+- I tested the website on Chrome, Microsoft Edge and Firefox. I haven't found any issues so far.
 
 #### Validation
 - I have validated the HTML using **[W3C Markup Validation Service](https://validator.w3.org/)**.

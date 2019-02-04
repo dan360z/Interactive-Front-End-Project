@@ -57,7 +57,9 @@ Once the user has selected an establishment type the places menu will smoothly s
 - The icon information window - This is a small window that appears when a user clicks on one of the markers that the map displays. It gives the user the ability to find out
 more about the establishment, by displaying the establishment's name, address, contact number, an external link to their website and up to 4 photos of the establishment.
 
-- Map messages - These are messages that appear in the center of the map that insturct the user to select an establishment type if they try to search without selecting one.
+- Image carousel - This shows the user all the images returned by the establishment, by the user clicking on of the images in an establishment's info window.
+
+- Map message popups - These are messages that appear in the center of the map that insturct the user to select an establishment type if they try to search without selecting one.
 A message will also appear showing the user how many establishments the search returned, or that the search didn't return any establishments.
 
 - The Map interface footer - This displays the credits and copyright.
@@ -79,9 +81,9 @@ by clicking a "directions" button in the icon information window.
 - **[JavaScript](https://www.javascript.com/)**
     - This project uses **JavaScript** to call on the Google Maps and Places API to render the map and implement all of it's functionalies into the site.
 - **[JQuery js](https://jquery.com/)**
-    - The project uses the **JQuery** JavaScript library for the all of the drop down menus, the "Let's go" button, and it is used in many of functions in maps.js and filters.js.
-- **[Bootstrap CSS 4.1.3](https://getbootstrap.com/)**
-    - The project uses the **Bootstrap** CSS library for it's grid system.
+    - The project uses the **JQuery** JavaScript library for the all of the drop down menus, map message popup windows, the "Let's go" button, and it is used in many of functions in maps.js and filters.js.
+- **[Bootstrap CSS and JS 4.1.3](https://getbootstrap.com/)**
+    - The project uses the **Bootstrap** CSS and JavaScript library for it's grid system and image carousel.
 - **[Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/tutorial)**
     - This project uses the Google Maps JavaScript API to render the map.
 - **[Google Places API](https://developers.google.com/places/web-service/intro)**

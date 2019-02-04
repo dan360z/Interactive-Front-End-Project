@@ -277,7 +277,7 @@ input[type=search]::-webkit-search-cancel-button {
             width: 90vh;
             margin: auto;
             .d-block {
-                max-height: 60vh;
+                max-height: 60vh;/*This handles portrait images that are too big*/
             }
 
         }

@@ -20,6 +20,7 @@ $(document).ready(function() {
    $('#tapMap').hide();
    $('#results').hide();
    $('#noResults').hide();
+   $('#carousel-container').hide();
 
    //Hides one dropdown menu when another shows---------------------------------------------
 
@@ -39,6 +40,10 @@ $(document).ready(function() {
       setTimeout(function() {
          $('.menu').slideToggle();
       }, 150);
+   });
+
+   $('.fa-window-close').click(function() {
+      $('#carousel-container').hide();
    });
 
    //Toggles the selected class for each place type------------------------------------------

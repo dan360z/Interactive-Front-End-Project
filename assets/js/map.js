@@ -3,7 +3,6 @@ var map;
 var service;
 var markers = [];
 var infoWindow;
-//Filter variables----------
 var placeType;
 
 
@@ -53,7 +52,7 @@ function initMap() {
             /*If a place type has not been selected then
             this shows a pop up that instructs user to select a place type*/
             $('#selectType').show();
-            $('#places-btn').addClass('glow'); //Makes places button glow to show where the place type menu is
+            $('#places-btn').addClass('glow'); //Makes places button glow to show where the place type menu is---
             setTimeout(function() {
                 $('#selectType').hide();
                 $('#places-btn').removeClass('glow');
@@ -66,6 +65,15 @@ function initMap() {
         content: document.getElementById('place-details')
     });
 }
+
+//Shows a pop up window instructing the  user to click or tap on the map when they have selected a place type----------------
+$('.place-type').children().click(function() {
+    clearMarkers();
+    $('#tapMap').show();
+    setTimeout(function() {
+        $('#tapMap').hide();
+    }, 1500);
+});
 
 //Filter results----------------------------------------------
 function filterResults() {
@@ -173,6 +181,13 @@ function searchPlaces() {
     });
 }
 
+//Add markers to map----------------------------
+function placeMarkers(i) {
+    return function() {
+        markers[i].setMap(map);
+    };
+}
+
 //Clear markers---------------------------------
 function clearMarkers() {
     for (var i = 0; i < markers.length; i++) {
@@ -181,13 +196,6 @@ function clearMarkers() {
         }
     }
     markers = [];
-}
-
-//Add markers to map----------------------------
-function placeMarkers(i) {
-    return function() {
-        markers[i].setMap(map);
-    };
 }
 
 //Get place details------------------------------------------
@@ -223,23 +231,34 @@ function setPlaceDetails(place) {
     //This returns up to 4 photos and adds them to the info window------------------------------
     $('#photos-wrapper').html('');
     for (var i = 0; i < 4; i++) {
-        if($(window).width() <= 576 && i == 2){ break; }//This limits the result to only 2 photos on small devices
-        $('#photos-wrapper').append('<img alt="A photo of the establishment" class="photos" src ="' + place.photos[i].getUrl() + '">');
+        if ($(window).width() <= 576 && i == 2) { break; } //This limits the result to only 2 photos on small devices------
+        //if (place.photos[i].height > place.photos[i].width) { continue; } //This stops portrait images for getting returned because they make the carousel jump-----------
+        $('#photos-wrapper').append('<img id="placePhoto' + i + '" alt="A photo of the establishment" class="photos" src ="' + place.photos[i].getUrl() + '">');
     }
+    
+    //Image Carousel----------------------------------
 
-    document.getElementById('url').innerHTML = '<a class="weblink" href="' + place.website + '" target="_blank">' + 'Website ' + '<i class="fas fa-globe-americas"></i>' + '</a>';
+    $('#carousel-container').hide(); //This hides the previous image carousel---------------------------------
+
+    $('.photos').click(function() {
+        $('#carousel-contents').html(''); //This clears out the carousel on each click----
+        //This puts the image that the user clicked on in position 1 of the carousel-------------
+        $('#carousel-contents').append('<div class="carousel-item active"><img class="d-block w-100" src="' + $(this).attr('src') + '" alt="A photo of the establishment"></div>');
+        //This gets all the place photos and puts them in the carousel------------- 
+        for (var i = 0; i < place.photos.length; i++) {
+            if ($(this).attr('src') === place.photos[i].getUrl()) { continue; } // This makes sure the image the user clicked on is not repeated------------
+            //if (place.photos[i].height > place.photos[i].width) { continue; } //This stops portrait images for getting returned because they make the carousel jump-----------
+            $('#carousel-contents').append('<div class="carousel-item"><img class="d-block w-100" src="' + place.photos[i].getUrl() + '" alt="A photo of the establishment"></div>');
+        }
+        $('#carousel-container').show();
+    });
+
     $('.cover').hide();
+    //This creates a link to the establishments website-------
+    document.getElementById('url').innerHTML = '<a class="weblink" href="' + place.website + '" target="_blank">' + 'Website ' + '<i class="fas fa-globe-americas"></i>' + '</a>';
+
 
     if (!place.website) { //If the place does not have a website the link will be covered up with "Not Available"---------
         $('.cover').show();
     }
 }
-
-//Shows a pop up window instructing the  user to click or tap on the map when they have selected a place type----------------
-$('.place-type').children().click(function() {
-    clearMarkers();
-    $('#tapMap').show();
-    setTimeout(function() {
-        $('#tapMap').hide();
-    }, 1500);
-});

@@ -197,7 +197,6 @@ input[type=search]::-webkit-search-cancel-button {
     }
 }
 
-
 /*----------------Info Window---------------*/
 
 #place-details {
@@ -228,6 +227,7 @@ input[type=search]::-webkit-search-cancel-button {
             height: 50px; //20 too small!
             margin: 0px 4px 8px 0px;
             display: inline-block;
+            cursor: pointer;
         }
         .weblink {
             position: relative;
@@ -252,6 +252,38 @@ input[type=search]::-webkit-search-cancel-button {
         }
     }
 }
+
+/*----------------Image Carousel-------------------------------------*/
+
+#carousel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @extend %overlay;
+    height: 100%;
+    .fa-window-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+            color: $overlay-opacity;
+        }
+    }
+    #carousel {
+        height: 100%;
+        .slide {
+            width: 90vh;
+            margin: auto;
+            .d-block {
+                max-height: 60vh;
+            }
+
+        }
+    }
+}
+
 
 /*----------------Footer-------------------------------------*/
 
@@ -281,6 +313,18 @@ footer {
     }
 }
 
+/*----------------Media Queries for large screens only---------------*/
+
+@media (min-width: 992px) {
+    /*-----This adjusts the Carousel to fit nicley in the viewport----------*/
+    #carousel-container>#carousel>.slide {
+        width: 50%;
+        .d-block {
+            max-height: 80vh;
+        }
+    }
+}
+
 /*----------------Media Queries for medium and large screens---------------*/
 
 @media (min-width: 576px) {
@@ -297,31 +341,32 @@ footer {
         }
     }
 
-    .guide-images-wrapper {
-        img {
-            margin-bottom: 30px;
-        }
+    .guide-images-wrapper>img {
+        margin-bottom: 30px;
     }
+
     /*------This makes the images bigger in the icon's info window on bigger screens--*/
-    #place-details {
-        ul {
-            .photos {
-                height: 60px;
-            }
+    #place-details>ul {
+        .photos {
+            height: 60px;
         }
     }
+
     /*-----This makes then map interface fit 100% of the viewport----------------*/
     .map-header {
         height: 7vh;
     }
+
     .map-wrapper {
         #map {
             height: 89vh;
         }
     }
+
     footer {
         height: 4vh;
     }
+
 }
 
 /*----------------Media Queries for small mobile devices when rotated horizontally---------------*/

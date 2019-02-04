@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Roboto:300,400,500,700');
 @import "helpers/_variables.scss";
 @import "helpers/_mixins.scss";
 @import "helpers/_helpers.scss";
@@ -14,7 +15,8 @@ body {
     @extend %overlay;
 }
 
-/*----------------Header---------------*/ //needs organising!
+/*----------------Header---------------*/
+
 header {
     background: url(https://www.hiusa.org/images/uploads/explore-the-world-image.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
@@ -25,34 +27,35 @@ header {
 
 /*----------------Intoduction Section---------------*/
 
-header {
-    .logo {
-        @include border($brand-color);
-        margin: 30px 0px;
-        padding: 5px 15px;
-        display: inline-block;
-        font: {
-            family: $logo-font;
-            size: 45px;
-        }
-    }
-    .intro-wrapper {
-        margin-bottom: 40px;
-        h3 {
-            font-family: $logo-font;
-        }
-        hr {
-            background-color: $brand-color;
-        }
-        p {
-            margin-bottom: 40px;
-        }
-    }
-    #scrollToMap {
-        @extend %btn;
-        @include border($brand-color);
+.logo {
+    @include border($brand-color);
+    margin: 30px 0px;
+    padding: 5px 15px;
+    display: inline-block;
+    font: {
+        family: $logo-font;
+        size: 45px;
     }
 }
+
+.intro-wrapper {
+    margin-bottom: 40px;
+    h3 {
+        font-family: $logo-font;
+    }
+    hr {
+        background-color: $brand-color;
+    }
+    p {
+        margin-bottom: 40px;
+    }
+}
+
+#scrollToMap {
+    @extend %btn;
+    @include border($brand-color);
+}
+
 
 /*--------------Main--------------------*/
 
@@ -92,7 +95,8 @@ header {
         @extend %btn;
     }
     #search-btn {
-        @include buttonColors($search-color, #0ED2F7);
+        @include buttonColors($search-color,
+        #0ED2F7);
         &:hover {
             @include border(#000);
             @include glow(#0ED2F7);
@@ -100,7 +104,8 @@ header {
     }
     #places-btn {
         margin-left: 10px;
-        @include buttonColors($places-color, #fb6000);
+        @include buttonColors($places-color,
+        #fb6000);
         &:hover {
             @include border(#000);
             @include glow(#fb6000);
@@ -232,7 +237,8 @@ input[type=search]::-webkit-search-cancel-button {
         .weblink {
             position: relative;
             @extend %btn;
-            @include buttonColors($weblink-color, #7303c0);
+            @include buttonColors($weblink-color,
+            #7303c0);
             font-size: 15px;
             &:hover {
                 @include glow(#7303c0);
@@ -277,7 +283,8 @@ input[type=search]::-webkit-search-cancel-button {
             width: 90vh;
             margin: auto;
             .d-block {
-                max-height: 60vh;/*This handles portrait images that are too big*/
+                max-height: 60vh;
+                /*This handles portrait images that are too big*/
             }
 
         }

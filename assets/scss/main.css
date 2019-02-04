@@ -1,14 +1,15 @@
-header #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul .weblink:hover, footer a:hover, .over-lay, .map-wrapper .menu .place-type .selected, #carousel-container {
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Roboto:300,400,500,700");
+#scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul .weblink:hover, footer a:hover, .over-lay, .map-wrapper .menu .place-type .selected, #carousel-container {
   background-color: rgba(0, 0, 0, 0.3); }
 
-header #scrollToMap, .map-header .map-btns, .map-wrapper .menu .place-type button, #place-details ul .weblink {
+#scrollToMap, .map-header .map-btns, .map-wrapper .menu .place-type button, #place-details ul .weblink {
   border: 1px solid #fff;
   padding: 4px 12px;
   color: #fff;
   font-family: "Kaushan Script", cursive;
   background-color: transparent; }
 
-header #scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul .weblink:hover, footer a:hover {
+#scrollToMap:hover, .map-header .map-btns:hover, .map-wrapper .menu .place-type button:hover, #place-details ul .weblink:hover, footer a:hover {
   border: 1px solid #000;
   cursor: pointer;
   -moz-transition: all 0.20s ease-in-out;
@@ -30,22 +31,24 @@ header {
   background-size: cover; }
 
 /*----------------Intoduction Section---------------*/
-header .logo {
+.logo {
   border: 1px solid #fff;
   margin: 30px 0px;
   padding: 5px 15px;
   display: inline-block;
   font-family: "Kaushan Script", cursive;
   font-size: 45px; }
-header .intro-wrapper {
+
+.intro-wrapper {
   margin-bottom: 40px; }
-  header .intro-wrapper h3 {
+  .intro-wrapper h3 {
     font-family: "Kaushan Script", cursive; }
-  header .intro-wrapper hr {
+  .intro-wrapper hr {
     background-color: #fff; }
-  header .intro-wrapper p {
+  .intro-wrapper p {
     margin-bottom: 40px; }
-header #scrollToMap {
+
+#scrollToMap {
   border: 1px solid #fff; }
 
 /*--------------Main--------------------*/

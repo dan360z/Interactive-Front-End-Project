@@ -27,11 +27,13 @@ $(document).ready(function() {
    $('#search-btn').click(function() {
       $('.menu').slideUp();
       $('.search-container').slideToggle();
+      $('#carousel-container').hide();
    });
 
    $('#places-btn').click(function() {
       $('.search-container').slideUp();
       $('.menu').slideToggle();
+      $('#carousel-container').hide();
    });
 
    //Hides the Places dropdown menu when user selects a place type--------------------------------------

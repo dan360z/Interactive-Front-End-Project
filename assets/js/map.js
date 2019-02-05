@@ -40,7 +40,6 @@ function initMap() {
     google.maps.event.addListener(map, 'click', function(event) {
 
         //This checks to see if a place type has been selected----------------
-
         if ($('button').hasClass('selected')) {
             $('.search-container').slideUp(); //Hides search box when user clicks to search----------
             map.panTo(event.latLng);
@@ -68,7 +67,7 @@ function initMap() {
 
 //Shows a pop up window instructing the  user to click or tap on the map when they have selected a place type----------------
 $('.place-type').children().click(function() {
-    clearMarkers();
+    clearMarkers();//Clears markers------------
     $('#tapMap').show();
     setTimeout(function() {
         $('#tapMap').hide();
@@ -135,7 +134,7 @@ function filterResults() {
     else if ($('#subway-station').hasClass('selected')) {
         placeType = ['subway_station'];
     }
-    //Runs searchPlaces------------------------------------------
+    //Runs searchPlaces function------------------------------------------
     searchPlaces();
 }
 
@@ -159,8 +158,7 @@ function searchPlaces() {
                 google.maps.event.addListener(markers[i], 'click', showInfoWindow); //Show info window when user clicks on a marker---
                 setTimeout(placeMarkers(i), i * 60);
                 /*This places the markers on the map one by one. This was inspired by Kim Pearton’s 
-                project Limitless for more information check the documentation credits section----------
-                */
+                project Limitless for more information check the documentation credits section*/
             }
         }
         //If there are results, this displays an info window showing the amount of results to the user--------
@@ -232,8 +230,16 @@ function setPlaceDetails(place) {
     $('#photos-wrapper').html('');
     for (var i = 0; i < 4; i++) {
         if ($(window).width() <= 576 && i == 2) { break; } //This limits the result to only 2 photos on small devices------
-        //if (place.photos[i].height > place.photos[i].width) { continue; } //This stops portrait images for getting returned because they make the carousel jump-----------
         $('#photos-wrapper').append('<img id="placePhoto' + i + '" alt="A photo of the establishment" class="photos" src ="' + place.photos[i].getUrl() + '">');
+    }
+    
+    $('.cover').hide();
+    //This creates a link to the establishments website-------
+    document.getElementById('url').innerHTML = '<a class="weblink" href="' + place.website + '" target="_blank">' + 'Website ' + '<i class="fas fa-globe-americas"></i>' + '</a>';
+
+    //If the place does not have a website the link will be covered up with "Not Available"---------
+    if (!place.website) {
+        $('.cover').show();
     }
     
     //Image Carousel----------------------------------
@@ -247,18 +253,8 @@ function setPlaceDetails(place) {
         //This gets all the place photos and puts them in the carousel------------- 
         for (var i = 0; i < place.photos.length; i++) {
             if ($(this).attr('src') === place.photos[i].getUrl()) { continue; } // This makes sure the image the user clicked on is not repeated------------
-            //if (place.photos[i].height > place.photos[i].width) { continue; } //This stops portrait images for getting returned because they make the carousel jump-----------
             $('#carousel-contents').append('<div class="carousel-item"><img class="d-block w-100" src="' + place.photos[i].getUrl() + '" alt="A photo of the establishment"></div>');
         }
         $('#carousel-container').show();
     });
-
-    $('.cover').hide();
-    //This creates a link to the establishments website-------
-    document.getElementById('url').innerHTML = '<a class="weblink" href="' + place.website + '" target="_blank">' + 'Website ' + '<i class="fas fa-globe-americas"></i>' + '</a>';
-
-
-    if (!place.website) { //If the place does not have a website the link will be covered up with "Not Available"---------
-        $('.cover').show();
-    }
 }

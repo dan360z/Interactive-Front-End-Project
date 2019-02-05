@@ -110,7 +110,7 @@ I have had alot of help writing the maps.js script.
 Here is a list of some of the sources that helped me along the way:
 - Google Maps JavaScript API [documentation](https://developers.google.com/maps/documentation/javascript/tutorial). - Help With rendering the map.
 - Google Places API [documentation](https://developers.google.com/places/web-service/intro). - Help with some of the **Places API** functionality.
-- Kim Pearton's project Limitless [maps.js script](https://github.com/kimpea/limitless/blob/master/assets/js/map.js). - Help with the overall structure of the script and the inspiration for the drop markers one by one effect, when the map returns results. 
+- Kim Pearton's project Limitless [maps.js script](https://github.com/kimpea/limitless/blob/master/assets/js/map.js). - Help with understanding some functions, the overall structure of the script and the inspiration for the drop markers one by one effect, when the map returns results. 
 - [LearnToProgram: Become a Web or Mobile Developer's](https://www.youtube.com/user/LearnToProgramDotTV?pbjreload=10) Youtube video [Google Places API: Coffee Shop Locator App](https://www.youtube.com/watch?v=eLGtNm4dSxc&t=54s). - Help
 with the click or tap to search establishments functionality.
 - [Stack OverFlow](https://stackoverflow.com/). Help with various code related problems.

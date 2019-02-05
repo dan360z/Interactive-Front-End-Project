@@ -24,7 +24,7 @@ body {
 
 /*----------------Header---------------*/
 header {
-  background: url(https://www.hiusa.org/images/uploads/explore-the-world-image.jpg) no-repeat center center scroll;
+  background: url(../images/explore-the-world-image.jpg) no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

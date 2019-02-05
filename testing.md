@@ -18,7 +18,7 @@ User scenarios:
     2. Enter query into the search input box and let the map center on that location.
     3. Select "Resturants" from the Places menu.
     4. Click anywhere on the map and verify that the Places API returns all nearby Restaurants in that location with markers displayed on the map.
-    5. Click on any of the markers and verify that an info window appears displaying the establishment's name, address, contact number and website.
+    5. Click on any of the markers and verify that an info window appears displaying the establishment's name, address, contact number, photos and website.
 
 #### Responsiveness
 - I have tested the website extensively on all screen sizes in vertical and portrait mode:

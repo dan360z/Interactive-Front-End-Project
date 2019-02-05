@@ -81,9 +81,9 @@ by clicking a "directions" button in the icon information window.
 - **[JavaScript](https://www.javascript.com/)**
     - This project uses **JavaScript** to call on the Google Maps and Places API to render the map and implement all of it's functionalies into the site.
 - **[JQuery js](https://jquery.com/)**
-    - The project uses the **JQuery** JavaScript library for the all of the drop down menus, map message popup windows, the "Let's go" button, and it is used in many of functions in maps.js and filters.js.
+    - This project uses the **JQuery** JavaScript library for the all of the drop down menus, map message popup windows, the "Let's go" button, and it is used in many of functions in maps.js and filters.js.
 - **[Bootstrap CSS and JS 4.1.3](https://getbootstrap.com/)**
-    - The project uses the **Bootstrap** CSS and JavaScript library for it's grid system and image carousel.
+    - This project uses the **Bootstrap** CSS and JavaScript library for it's grid system and image carousel.
 - **[Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/tutorial)**
     - This project uses the Google Maps JavaScript API to render the map.
 - **[Google Places API](https://developers.google.com/places/web-service/intro)**

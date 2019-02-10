@@ -57,7 +57,7 @@ Once the user has selected an establishment type the places menu will smoothly s
 - The icon information window - This is a small window that appears when a user clicks on one of the markers that the map displays. It gives the user the ability to find out
 more about the establishment, by displaying the establishment's name, address, contact number, an external link to their website and up to 4 photos of the establishment.
 
-- The image carousel - This displays all the images returned by the establishment, this displays when a user clicks on one of the images in an establishment's info window.
+- The image carousel - This displays all the images returned by the establishment when a user clicks on one of the images in an establishment's info window.
 
 - Map message popups - These are messages that appear in the center of the map that insturct the user to select an establishment type if they try to search without selecting one.
 A message will also appear showing the user how many establishments the search returned, or that the search didn't return any establishments.

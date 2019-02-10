@@ -23,7 +23,8 @@ or current location.
 
 ### Wireframes
 
-################################
+- [Desktop/Mobile Wireframes](assets/wireframes/desktop-mobile.jpg)
+- [Desktop/Mobile Wireframes Map section](assets/wireframes/desktop-mobileMap.jpg)
 
 ## Features
 
